@@ -1,0 +1,197 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Regular.eot');
+    src:url('../font/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Regular.woff2') format('woff2'),
+        url('../font/Montserrat-Regular.woff') format('woff'),
+        url('../font/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-ExtraLight.eot');
+    src: 
+        url('../font/Montserrat-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-ExtraLight.woff2') format('woff2'),
+        url('../font/Montserrat-ExtraLight.woff') format('woff'),
+        url('../font/Montserrat-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Bold.eot');
+    src: 
+        url('../font/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Bold.woff2') format('woff2'),
+        url('../font/Montserrat-Bold.woff') format('woff'),
+        url('../font/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Light.eot');
+    src: l
+        url('../font/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Light.woff2') format('woff2'),
+        url('../font/Montserrat-Light.woff') format('woff'),
+        url('../font/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Black.eot');
+    src: 
+        url('../font/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Black.woff2') format('woff2'),
+        url('../font/Montserrat-Black.woff') format('woff'),
+        url('../font/Montserrat-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Medium.eot');
+    src: 
+        url('../font/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Medium.woff2') format('woff2'),
+        url('../font/Montserrat-Medium.woff') format('woff'),
+        url('../font/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-ExtraBold.eot');
+    src: 
+        url('../font/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-ExtraBold.woff2') format('woff2'),
+        url('../font/Montserrat-ExtraBold.woff') format('woff'),
+        url('../font/Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-SemiBold.eot');
+    src: 
+        url('../font/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../font/Montserrat-SemiBold.woff') format('woff'),
+        url('../font/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Thin.eot');
+    src: 
+        url('../font/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../font/Montserrat-Thin.woff2') format('woff2'),
+        url('../font/Montserrat-Thin.woff') format('woff'),
+        url('../font/Montserrat-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+body{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+}
+
+ h2 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+font-size: 34px;
+line-height: 120%;
+color: #2361A9;
+letter-spacing: 0.01em;
+text-transform: uppercase;
+}
+
+.header{    
+    height: 80px;
+    border-bottom:1px solid #D8E0EB;
+}
+.header-container{
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 150px;
+}
+.navigation{
+   /* margin: 30px 0;*/
+}
+.credentials{
+    display: flex;
+
+}
+.nav__list{
+    display: flex;
+
+}
+.nav__list-item{
+    list-style: none;
+    color: #2361A9;
+    letter-spacing: 0.02em;
+text-transform: uppercase;
+font-weight: 700;
+font-size: 15px;
+line-height: 109%;
+margin: 15px;
+}
+.credentials{
+
+}
+.credentials__lang{
+
+}
+.credentials__list{
+    border: none;
+    color: #2361A9;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 109%;
+    width: 80px;
+    outline: none;
+}
+.credentials__lang::after{
+    content: url('../images/lang.svg');
+    width: 25px;
+    position: relative;
+    top: 9px;
+    left: 58px;
+}
+.credentials__list-item{
+
+}
+.credentials__avatar{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #2361A9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.credentials__button{
+    width: 100px;
+    height: 40px;
+    border: 2px solid #2361A9;
+    color: #2361A9;
+    border-radius: 20px;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+}

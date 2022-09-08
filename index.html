@@ -5,20 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meest-express</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body><header class="header">
-    <img src="./logo.svg" alt="logo">
-    <div class="navigation">
-        <ul class="nav-list">
-            <li class="nav-item">MAin</li>
-            <li class="nav-item">How it works</li>
-            <li class="nav-item">Benefits</li>
-            <li class="nav-item">Information for countries</li>
-            <li class="nav-item">Сontact</li>
-        </ul>
+<body>
+    <header class="header">
+        <div class="header-container">
+        <img class="logo" src="./images/logo.svg" alt="logo">
+        <div class="navigation">
+            <ul class="nav__list">
+                <li class="nav__list-item">MAin</li>
+                <li class="nav__list-item">How it works</li>
+                <li class="nav__list-item">Benefits</li>
+                <li class="nav__list-item">Information for countries</li>
+                <li class="nav__list-item">Сontact</li>
+            </ul>
+        </div>
+        <div class="credentials">  
+            <div class="credentials__lang"></div>
+            <select class="credentials__list">
+                <option class="credentials__list-item" selected>UK</option>
+                <option class="credentials__list-item">UA</option>
+                <option class="credentials__list-item">EN</option>
+            </select> 
+            <div class="credentials__avatar">
+                <img class="credentials__avatar-img" src="./images/ava.svg" alt="ava" />
+            </div>  
+            <button class="credentials__button">REGISTER</button>       
+        </div>
     </div>
-    <div class="credentials"></div>
 </header>
     <h2>How it works</h3>
     <div>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, similique.</div>
