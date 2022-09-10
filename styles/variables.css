@@ -1,0 +1,21 @@
+:root{
+    --border: 1px solid #D8E0EB;
+    --color: #0056A4;
+    --color2: #5A6673;
+    --color3: #1B2B3C;
+    --color1: #2361A9;
+    --border-radius: 20px;
+    --second-background: #E9EFF6;
+    --third-background: #F8F9FA;
+    --white: #FFF
+}
+*{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    line-height: 109%;
+    color: var(--color1);
+}
+.container{
+    padding: 0 60px;
+}

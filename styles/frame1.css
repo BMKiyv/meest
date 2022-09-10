@@ -1,0 +1,108 @@
+.login__wrap{
+    background-color: var(--third-background);
+    position: relative;
+    height: 100vh;
+}
+.login__logo{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 14%;
+    left: 50%;
+}
+.login__container{
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color:var(--color1);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    background-color: var(--white);
+    
+    text-align: center;
+   
+}
+.login__container-inner{
+    width: 424px;
+    padding: 30px 55px;
+}
+.login__container-header{
+    font-weight: 600;
+    font-size: 22px;
+}
+.login__form{
+    text-align: left;
+    margin-top: 30px;
+}
+.login__form-label{
+    font-weight: 500;
+    font-size: 12px;
+    display: inline-block;
+    width: 100%;
+
+}
+.login__form-span{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    display: inline-block;
+}
+.login__form-input{
+    border: 1px solid #D7D8D9;
+    border-radius: 100px;
+    padding-left: 20px;
+    font-size: 12px;
+    width: 410px;
+    height: 44px;
+    margin-bottom: 20px;
+}
+.login__form-button{
+    margin-top: 10px;
+    background-color: var(--color1);
+    color: var(--white);
+    width: 200px;
+    height: 55px;
+    border: 1px solid var(--color1);
+    border-radius: 28px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.login__container-others{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.login__container-others-link{
+    text-decoration: none;
+    color: var(--color1);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+}
+.login__divider{
+    display: flex;
+    align-items: center;
+}
+.login__divider-line{
+    width: 45%;
+    height: 1px;
+    background-color: #D8E0EB;
+}
+.login__divider-text{
+    display: inline-block;
+    margin: 0 19px;
+}
+.login__button{
+    margin-top: 30px;
+    background-color: var(--white);
+    color: var(--color1);
+    width: 200px;
+    height: 55px;
+    border: 1px solid var(--color1);
+    border-radius: 28px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 15px;
+}

@@ -1,106 +1,3 @@
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-Regular.eot');
-    src:url('../font/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../font/Montserrat-Regular.woff2') format('woff2'),
-        url('../font/Montserrat-Regular.woff') format('woff'),
-        url('../font/Montserrat-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-ExtraLight.eot');
-    src: 
-        url('../font/Montserrat-ExtraLight.eot?#iefix') format('embedded-opentype'),
-        url('../font/Montserrat-ExtraLight.woff2') format('woff2'),
-        url('../font/Montserrat-ExtraLight.woff') format('woff'),
-        url('../font/Montserrat-ExtraLight.ttf') format('truetype');
-    font-weight: 200;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-Bold.eot');
-    src: 
-        url('../font/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
-        url('../font/Montserrat-Bold.woff2') format('woff2'),
-        url('../font/Montserrat-Bold.woff') format('woff'),
-        url('../font/Montserrat-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-Light.eot');
-    src: l
-        url('../font/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
-        url('../font/Montserrat-Light.woff2') format('woff2'),
-        url('../font/Montserrat-Light.woff') format('woff'),
-        url('../font/Montserrat-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-Black.eot');
-    src: 
-        url('../font/Montserrat-Black.eot?#iefix') format('embedded-opentype'),
-        url('../font/Montserrat-Black.woff2') format('woff2'),
-        url('../font/Montserrat-Black.woff') format('woff'),
-        url('../font/Montserrat-Black.ttf') format('truetype');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-Medium.eot');
-    src: 
-        url('../font/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
-        url('../font/Montserrat-Medium.woff2') format('woff2'),
-        url('../font/Montserrat-Medium.woff') format('woff'),
-        url('../font/Montserrat-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-ExtraBold.eot');
-    src: 
-        url('../font/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('../font/Montserrat-ExtraBold.woff2') format('woff2'),
-        url('../font/Montserrat-ExtraBold.woff') format('woff'),
-        url('../font/Montserrat-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-SemiBold.eot');
-    src: 
-        url('../font/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('../font/Montserrat-SemiBold.woff2') format('woff2'),
-        url('../font/Montserrat-SemiBold.woff') format('woff'),
-        url('../font/Montserrat-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../font/Montserrat-Thin.eot');
-    src: 
-        url('../font/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
-        url('../font/Montserrat-Thin.woff2') format('woff2'),
-        url('../font/Montserrat-Thin.woff') format('woff'),
-        url('../font/Montserrat-Thin.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;
-}
-
 body{
     font-family: 'Montserrat';
     margin: 0;
@@ -110,11 +7,11 @@ body{
  h2 {
     font-family: 'Montserrat';
     font-weight: 700;
-font-size: 34px;
-line-height: 120%;
-color: #2361A9;
-letter-spacing: 0.01em;
-text-transform: uppercase;
+    font-size: 34px;
+    line-height: 120%;
+    color: #2361A9;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
 }
 
 .header{    
@@ -149,23 +46,29 @@ text-transform: uppercase;
     list-style: none;
     color: #2361A9;
     letter-spacing: 0.02em;
-text-transform: uppercase;
-font-weight: 700;
-font-size: 15px;
-line-height: 109%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 109%;
+    position: relative;
 }
 
 .nav__list-item::before{
     content: '';
 height: 3px;
+border-radius: 30% 30% 0 0;
 width: 100%;
 background-color: transparent;
 position: absolute;
-top: 78px;
+top: 45px;
 }
 .nav__list-item:hover::before{
         background-color: red;
     
+}
+.nav__list-item:active::before{
+    background-color: red;
+
 }
 
 .nav__list-item:not(:last-child){
@@ -225,4 +128,55 @@ top: 78px;
     .nav__list-item:not(:last-child){
         margin-right: 20px;
     }
+}
+
+#main{
+    width: 100%;
+    height: 510px;
+    background-color: var(--third-background);
+    background-image: url(../images/first.svg),url(../images/firstback.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px,center right;
+
+}
+.first{
+    width: 600px;
+}
+.first-title{
+    font-weight: 600;
+font-size: 44px;
+line-height: 120%;
+letter-spacing: 0.01em;
+text-transform: uppercase;
+padding-top: 110px;
+}
+.first__links{
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    justify-content: space-around;
+}
+.first__links-item{
+    box-shadow: 0px 8px 14px 2px #ececec;
+    border-radius: 14px;
+    background-color: var(--white);
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    padding-bottom: 41px;
+    padding-top: 45px;
+}
+
+.first__links-text{
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 14px;
+}
+.first__links-item:nth-of-type(2)> .first__links-text{
+    margin-top: 22px;
+    
 }

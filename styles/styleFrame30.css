@@ -1,0 +1,12 @@
+body{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    width: 150px;
+}
+.section{
+    background-color: var(--third-background);
+    height: 200px;
+}

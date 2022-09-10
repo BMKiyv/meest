@@ -1,0 +1,27 @@
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 40px;
+    border-top: var(--border);
+    background-color: #FFFFFF;
+}
+.footer__logo{
+    width: 173px;
+}
+.footer__text{
+    display: flex;
+}
+.footer__text-content{
+    width: 320px;
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--color3);
+}
+.footer__text-link{
+    color: var(--color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+}
