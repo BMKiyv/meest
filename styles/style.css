@@ -497,6 +497,75 @@ summary {
 }
 .contacts__list{
     margin-top: 20px;
+
+}
+.contacts__list-item{
+    padding: 25px 40px;
+    background: #eceff4;
+}
+.contacts__list-grid{
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+}
+.contacts__list-item:not(:last-child){
+    border-bottom: 1px solid #cad3df;
+}
+.contacts__list-col1{
+    width: 31.6%;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+}
+.contacts__list-col1>span{
+    font-size: 16px;
+    letter-spacing: .4px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #172c3e;
+}
+.contacts__list-icon{
+    margin: 0 0 0 20px;
+}
+.contacts__list-svg{
+    width: 20px;
+}
+.contacts__list-row{
+    width: 68.4%;
+}
+.contacts__list-columns-wrap:not(:last-child){
+margin-bottom: 10px;
+}
+.contacts__list-columns-wrap{
+    display: flex;
+    align-items: center;
+}
+.contacts__list-col2{
+    width: 40.03%;
+    padding-right: 10px;
+}
+.contacts__list-city{
+    font-weight: 700;
+    margin: 0 0 3px;
+    color: #172c3e;
+    font-size: 14px;
+}
+.contacts__list-adress{
+    font-size: 12px;
+    color: #172c3e;
+}
+.contacts__list-col3{
+    width: 34.09%;
+    padding-right: 10px;
+}
+.contacts__list-anchor{
+    color: #0061af;
+    font-weight: 700;
+    display: block;
+    text-decoration: none;
+}
+.contacts__list-col4{
+    width: 25.88%;
 }
 .contacts__list-continent-name{
     font-weight: 700;
