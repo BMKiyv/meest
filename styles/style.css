@@ -499,20 +499,33 @@ summary {
     margin-top: 20px;
 
 }
-.contacts__list-item{
+.contacts__list-block{
     padding: 25px 40px;
     background: #eceff4;
+    max-height: 285px;
+    overflow: scroll;
+}
+.contacts__list-item{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #cad3df;
+    line-height: 1.5;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
 }
 .contacts__list-grid{
     display: flex;
     align-items: center;
     line-height: 1.5;
 }
-.contacts__list-item:not(:last-child){
-    border-bottom: 1px solid #cad3df;
+.contacts__list-item:last-child{
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 .contacts__list-col1{
-    width: 31.6%;
+    width: 30.7%;
     padding-right: 10px;
     display: flex;
     align-items: center;
@@ -579,10 +592,31 @@ summary.contacts__list-continent{
     background-color: var(--white);
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
+}
+.hidden{
+    display: none;
+}
+.toggled{
+    display: none;
 }
 
   @media (max-width:1280px) {
     .nav__list-item:not(:last-child){
         margin-right: 20px;
+    }
+}
+@media (max-width:1024px){
+    /* .hidden{
+        display: block;
+    } */
+    .toggled{
+        display: block;
+    }
+    .navigation{
+        display: none;
+    }
+    #mobile-menu:checked ~ .navigation{
+        display: block;
     }
 }

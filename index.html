@@ -14,6 +14,8 @@
     <header class="header">
         <div class="header-container">
         <img class="logo" src="./images/logo.svg" alt="logo">
+        <label for="mobile-menu" class="toggled">X</label>
+        <input type="checkbox" id="mobile-menu" class="hidden">
         <div class="navigation">
             <ul class="nav__list">
                 <li class="nav__list-item"><a href="#main" class="footer__group-link">MAin</a></li>
@@ -241,8 +243,8 @@
         <div class="contacts__list">
             <details class="contacts__list-details">
                 <summary class="contacts__list-continent"><img src="./images/lang.svg" alt="contacts-sign"><span class="contacts__list-continent-name">Asia</span></summary>
-                <div class="contacts__list-item">
-                    <div class="contacts__list-grid">
+                <div class="contacts__list-block">
+                <div class="contacts__list-item">                   
                         <div class="contacts__list-col1">
                             <span>Meest China</span>
                             <a href="https://cn.meest.com/" target="_blank"  class="contacts__list-icon">
@@ -274,88 +276,296 @@
                                 <a href="#" class="contacts__list-anchor"></a>
                             </div>
                         </div>
-                    </div>
-                    </div>
+                    </div>                    
                 </div>
                 <div class="contacts__list-item">
-                    <div class="contacts__list-grid">
                         <div class="contacts__list-col1">
-                            <span>Meest-Ukraine</span>
-                            <a href="#" class="contacts__list-icon">
+                            <span>Meest Kazakhstan</span>
+                            <a href="https://kz.meest.com" class="contacts__list-icon">
                                 <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
                             </a>
                         </div>
                         <div class="contacts__list-row">
                         <div class="contacts__list-columns-wrap">
                             <div class="contacts__list-col2">
-                                <div class="contacts__list-city">Lviv, Ukraine</div>
-                                <div class="contacts__list-adress">47, Zelena str. 03039</div>
+                                <div class="contacts__list-city"> 00-124 Warszawa,  Poland </div>
+                                <div class="contacts__list-adress">Rondo ONZ 1</div>
                             </div>
                             <div class="contacts__list-col3">
-                                <a href="" class="contacts__list-anchor">fake@fake.com</a>
+                                <a href="" class="contacts__list-anchor"></a>
                             </div>
                             <div class="contacts__list-col4">
-                                <a href="" class="contacts__list-anchor">+380771112233</a>
-                                <a href="" class="contacts__list-anchor">+380771112233</a>
-                                <a href="" class="contacts__list-anchor">+380771112233</a>
+                                <a href="" class="contacts__list-anchor"></a>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="contacts__list-item">
+                    <div class="contacts__list-col1">
+                        <span>Meest Israel</span>
+                        <a href="https://il.meest.com" class="contacts__list-icon">
+                            <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                        </a>
+                    </div>
+                    <div class="contacts__list-row">
+                    <div class="contacts__list-columns-wrap">
+                        <div class="contacts__list-col2">
+                            <div class="contacts__list-city"> 00-124 Warszawa,  Poland </div>
+                            <div class="contacts__list-adress">Rondo ONZ 1</div>
+                        </div>
+                        <div class="contacts__list-col3">
+                            <a href="" class="contacts__list-anchor"></a>
+                        </div>
+                        <div class="contacts__list-col4">
+                            <a href="" class="contacts__list-anchor"></a>
+                        </div>
                     </div>
                 </div>
+            </div>
+            </div>
             </details>
             <details class="contacts__list-details">
                 <summary class="contacts__list-continent"><img src="./images/lang.svg" alt="contacts-sign"><span class="contacts__list-continent-name">Europe</span></summary>
-                <div class="contacts__list-item">
-                    <div class="contacts__list-grid">
-                        <div class="contacts__list-col1">
-                            <span>Meest-Ukraine</span>
-                            <a href="#" class="contacts__list-icon">
-                                <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
-                            </a>
-                        </div>
-                        <div class="contacts__list-columns-wrap">
-                            <div class="contacts__list-col2">
-                                <div class="contacts__list-city">Lviv, Ukraine</div>
-                                <div class="contacts__list-adress">47, Zelena str. 03039</div>
+                <div class="contacts__list-block">
+                    <div class="contacts__list-item">                   
+                            <div class="contacts__list-col1">
+                                <span>Meest China</span>
+                                <a href="https://cn.meest.com/" target="_blank"  class="contacts__list-icon">
+                                    <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                                </a>
                             </div>
-                            <div class="contacts__list-col3">
-                                <a href="" class="contacts__list-anchor">fake@fake.com</a>
+                            <div class="contacts__list-row">
+                            <div class="contacts__list-columns-wrap">
+                                <div class="contacts__list-col2">
+                                    <div class="contacts__list-city">Guangzhou, China  </div>
+                                    <div class="contacts__list-adress">Panyu District, Hanxi country, Zhongcun Street, No. 8 First Lane, 1rd floor</div>
+                                </div>
+                                <div class="contacts__list-col3">
+                                    <a href="malto:support@meest.cn" class="contacts__list-anchor">support@meest.cn</a>
+                                </div>
+                                <div class="contacts__list-col4">
+                                    <a href="tel:+380442244515" class="contacts__list-anchor">+380442244515</a>
+                                </div>
                             </div>
-                            <div class="contacts__list-col4">
-                                <a href="" class="contacts__list-anchor">+380771112233</a>
-                                <a href="" class="contacts__list-anchor">+380771112233</a>
-                                <a href="" class="contacts__list-anchor">+380771112233</a>
+                            <div class="contacts__list-columns-wrap">
+                                <div class="contacts__list-col2">
+                                    <div class="contacts__list-city"> 广州  广东,  China    </div>
+                                    <div class="contacts__list-adress">广州市番禺区钟村镇汉溪村一巷8号1层。511495</div>
+                                </div>
+                                <div class="contacts__list-col3">
+                                    <a href="#" class="contacts__list-anchor"></a>
+                                </div>
+                                <div class="contacts__list-col4">
+                                    <a href="#" class="contacts__list-anchor"></a>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="contacts__list-item">
+                            <div class="contacts__list-col1">
+                                <span>Meest Kazakhstan</span>
+                                <a href="https://kz.meest.com" class="contacts__list-icon">
+                                    <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                                </a>
+                            </div>
+                            <div class="contacts__list-row">
+                            <div class="contacts__list-columns-wrap">
+                                <div class="contacts__list-col2">
+                                    <div class="contacts__list-city"> 00-124 Warszawa,  Poland </div>
+                                    <div class="contacts__list-adress">Rondo ONZ 1</div>
+                                </div>
+                                <div class="contacts__list-col3">
+                                    <a href="" class="contacts__list-anchor"></a>
+                                </div>
+                                <div class="contacts__list-col4">
+                                    <a href="" class="contacts__list-anchor"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="contacts__list-item">
+                        <div class="contacts__list-col1">
+                            <span>Meest Israel</span>
+                            <a href="https://il.meest.com" class="contacts__list-icon">
+                                <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                            </a>
+                        </div>
+                        <div class="contacts__list-row">
+                        <div class="contacts__list-columns-wrap">
+                            <div class="contacts__list-col2">
+                                <div class="contacts__list-city"> 00-124 Warszawa,  Poland </div>
+                                <div class="contacts__list-adress">Rondo ONZ 1</div>
+                            </div>
+                            <div class="contacts__list-col3">
+                                <a href="" class="contacts__list-anchor"></a>
+                            </div>
+                            <div class="contacts__list-col4">
+                                <a href="" class="contacts__list-anchor"></a>
+                            </div>
+                        </div>
+                    </div>                   
+                    </div>
+                    <div class="contacts__list-item">                   
+                        <div class="contacts__list-col1">
+                            <span>Meest China</span>
+                            <a href="https://cn.meest.com/" target="_blank"  class="contacts__list-icon">
+                                <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                            </a>
+                        </div>
+                        <div class="contacts__list-row">
+                        <div class="contacts__list-columns-wrap">
+                            <div class="contacts__list-col2">
+                                <div class="contacts__list-city">Guangzhou, China  </div>
+                                <div class="contacts__list-adress">Panyu District, Hanxi country, Zhongcun Street, No. 8 First Lane, 1rd floor</div>
+                            </div>
+                            <div class="contacts__list-col3">
+                                <a href="malto:support@meest.cn" class="contacts__list-anchor">support@meest.cn</a>
+                            </div>
+                            <div class="contacts__list-col4">
+                                <a href="tel:+380442244515" class="contacts__list-anchor">+380442244515</a>
+                            </div>
+                        </div>
+                        <div class="contacts__list-columns-wrap">
+                            <div class="contacts__list-col2">
+                                <div class="contacts__list-city"> 广州  广东,  China    </div>
+                                <div class="contacts__list-adress">广州市番禺区钟村镇汉溪村一巷8号1层。511495</div>
+                            </div>
+                            <div class="contacts__list-col3">
+                                <a href="#" class="contacts__list-anchor"></a>
+                            </div>
+                            <div class="contacts__list-col4">
+                                <a href="#" class="contacts__list-anchor"></a>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="contacts__list-item">
+                        <div class="contacts__list-col1">
+                            <span>Meest Kazakhstan</span>
+                            <a href="https://kz.meest.com" class="contacts__list-icon">
+                                <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                            </a>
+                        </div>
+                        <div class="contacts__list-row">
+                        <div class="contacts__list-columns-wrap">
+                            <div class="contacts__list-col2">
+                                <div class="contacts__list-city"> 00-124 Warszawa,  Poland </div>
+                                <div class="contacts__list-adress">Rondo ONZ 1</div>
+                            </div>
+                            <div class="contacts__list-col3">
+                                <a href="" class="contacts__list-anchor"></a>
+                            </div>
+                            <div class="contacts__list-col4">
+                                <a href="" class="contacts__list-anchor"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts__list-item">
+                    <div class="contacts__list-col1">
+                        <span>Meest Israel</span>
+                        <a href="https://il.meest.com" class="contacts__list-icon">
+                            <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                        </a>
+                    </div>
+                    <div class="contacts__list-row">
+                    <div class="contacts__list-columns-wrap">
+                        <div class="contacts__list-col2">
+                            <div class="contacts__list-city"> 00-124 Warszawa,  Poland </div>
+                            <div class="contacts__list-adress">Rondo ONZ 1</div>
+                        </div>
+                        <div class="contacts__list-col3">
+                            <a href="" class="contacts__list-anchor"></a>
+                        </div>
+                        <div class="contacts__list-col4">
+                            <a href="" class="contacts__list-anchor"></a>
+                        </div>
+                    </div>
+                </div>                   
+                </div>
                 </div>
             </details>
             <details class="contacts__list-details">
                 <summary class="contacts__list-continent"><img src="./images/lang.svg" alt="contacts-sign"><span class="contacts__list-continent-name">North America</span></summary>
-                <div class="contacts__list-item">
-                    <div class="contacts__list-grid">
-                        <div class="contacts__list-col1">
-                            <span>Meest-Ukraine</span>
-                            <a href="#" class="contacts__list-icon">
-                                <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
-                            </a>
-                        </div>
-                        <div class="contacts__list-columns-wrap">
-                            <div class="contacts__list-col2">
-                                <div class="contacts__list-city">Lviv, Ukraine</div>
-                                <div class="contacts__list-adress">47, Zelena str. 03039</div>
+                <div class="contacts__list-block">
+                    <div class="contacts__list-item">                   
+                            <div class="contacts__list-col1">
+                                <span>Meest China</span>
+                                <a href="https://cn.meest.com/" target="_blank"  class="contacts__list-icon">
+                                    <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                                </a>
                             </div>
-                            <div class="contacts__list-col3">
-                                <a href="" class="contacts__list-anchor">fake@fake.com</a>
+                            <div class="contacts__list-row">
+                            <div class="contacts__list-columns-wrap">
+                                <div class="contacts__list-col2">
+                                    <div class="contacts__list-city">Guangzhou, China  </div>
+                                    <div class="contacts__list-adress">Panyu District, Hanxi country, Zhongcun Street, No. 8 First Lane, 1rd floor</div>
+                                </div>
+                                <div class="contacts__list-col3">
+                                    <a href="malto:support@meest.cn" class="contacts__list-anchor">support@meest.cn</a>
+                                </div>
+                                <div class="contacts__list-col4">
+                                    <a href="tel:+380442244515" class="contacts__list-anchor">+380442244515</a>
+                                </div>
                             </div>
-                            <div class="contacts__list-col4">
-                                <a href="" class="contacts__list-anchor">+380771112233</a>
-                                <a href="" class="contacts__list-anchor">+380771112233</a>
-                                <a href="" class="contacts__list-anchor">+380771112233</a>
+                            <div class="contacts__list-columns-wrap">
+                                <div class="contacts__list-col2">
+                                    <div class="contacts__list-city"> 广州  广东,  China    </div>
+                                    <div class="contacts__list-adress">广州市番禺区钟村镇汉溪村一巷8号1层。511495</div>
+                                </div>
+                                <div class="contacts__list-col3">
+                                    <a href="#" class="contacts__list-anchor"></a>
+                                </div>
+                                <div class="contacts__list-col4">
+                                    <a href="#" class="contacts__list-anchor"></a>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="contacts__list-item">
+                            <div class="contacts__list-col1">
+                                <span>Meest Kazakhstan</span>
+                                <a href="https://kz.meest.com" class="contacts__list-icon">
+                                    <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                                </a>
+                            </div>
+                            <div class="contacts__list-row">
+                            <div class="contacts__list-columns-wrap">
+                                <div class="contacts__list-col2">
+                                    <div class="contacts__list-city"> 00-124 Warszawa,  Poland </div>
+                                    <div class="contacts__list-adress">Rondo ONZ 1</div>
+                                </div>
+                                <div class="contacts__list-col3">
+                                    <a href="" class="contacts__list-anchor"></a>
+                                </div>
+                                <div class="contacts__list-col4">
+                                    <a href="" class="contacts__list-anchor"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="contacts__list-item">
+                        <div class="contacts__list-col1">
+                            <span>Meest Israel</span>
+                            <a href="https://il.meest.com" class="contacts__list-icon">
+                                <img src="./images/contacts-ico.svg" alt="" class="contacts__list-svg">
+                            </a>
+                        </div>
+                        <div class="contacts__list-row">
+                        <div class="contacts__list-columns-wrap">
+                            <div class="contacts__list-col2">
+                                <div class="contacts__list-city"> 00-124 Warszawa,  Poland </div>
+                                <div class="contacts__list-adress">Rondo ONZ 1</div>
+                            </div>
+                            <div class="contacts__list-col3">
+                                <a href="" class="contacts__list-anchor"></a>
+                            </div>
+                            <div class="contacts__list-col4">
+                                <a href="" class="contacts__list-anchor"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </details>
         </div>
