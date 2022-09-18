@@ -14,63 +14,87 @@
 
 <body>
     <header class="header">
-        <img class="logo" src="./images/logo.svg" alt="logo">
+        <a href="" ><img class="logo" src="./images/logo.svg" alt="logo"></a>
+        <label for="mobile-menu" class="toggled"></label>
+        <input type="checkbox" id="mobile-menu" class="hidden">
+        <div id="icon2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <div class="header-container">
-            
-            <label for="mobile-menu" class="toggled">
-
-              </label>
-            <input type="checkbox" id="mobile-menu" class="hidden">
-            <div id="icon2">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
             <div class="navigation">
+                <div class="mobile__menu-button">
+                <button class="credentials__avatar">
+                    <img class="credentials__avatar-img" src="./images/ava.svg" alt="ava" />
+                    <span class="credentials__avatar-text">LOGIN</span>
+                </button>
+                <button class="credentials__button">REGISTER</button>
+            </div>
                 <ul class="nav__list">
                     <li class="nav__list-item"><a href="#main" class="footer__group-link">MAin</a></li>
                     <li class="nav__list-item"><a href="#how-it-works" class="footer__group-link">How it works</a></li>
                     <li class="nav__list-item"><a href="#benefts" class="footer__group-link">Benefits</a></li>
                     <li class="nav__list-item"><a href="#information-for-countries"
                             class="footer__group-link">Information for countries</a></li>
-                    <li class="nav__list-item"><a href="" class="footer__group-link">Сontact</a></li>
+                    <li class="nav__list-item"><a href="#contacts" class="footer__group-link">Сontact</a></li>
                 </ul>
             </div>
-            <div class="credentials">
-                <div class="credentials__lang"></div>
-                <select class="credentials__list">
-                    <option class="credentials__list-item" selected>UK</option>
-                    <option class="credentials__list-item">UA</option>
-                    <option class="credentials__list-item">EN</option>
-                </select>
-                <div class="credentials__avatar">
-                    <img class="credentials__avatar-img" src="./images/ava.svg" alt="ava" />
+            <div class="credentials-header">
+                <div class="header__group-social visiblity">
+                    <img src="./images/facebook.svg" alt="facebook" class="footer__group-network">
+                    <img src="./images/instagram.svg" alt="instagram" class="footer__group-network">
                 </div>
-                <button class="credentials__button">REGISTER</button>
+                <label for="credential-input" class="credential__label"></label>
+                <input type="checkbox" id="credential-input" class="credential__input">
+                <div class="credential__language credential-before">                    
+                    <div class="credential__label-language">UK</div>
+                    <img src="./images/lang.svg" alt="">
+                    <!-- <img src="./images/closing.svg" alt="" class="credential-img"> -->
+                </div>
+                    <div class="credentials__list">
+                        <div class="credentials__list-item"><span class="credentials__list-text">Ukraine</span><div class="credentials__list-checked"></div></div>
+                        <div class="credentials__list-line"></div>
+                        <div class="credentials__list-item"><span class="credentials__list-text">English</span><div class="credentials__list-checked"></div></div>
+                    </div>
+
+                <!-- <button class="credentials__avatar">
+                    <img class="credentials__avatar-img" src="./images/ava.svg" alt="ava" />
+                    <span class="credentials__avatar-text">LOGIN</span>
+                </button>
+                <button class="credentials__button">REGISTER</button> -->
             </div>
         </div>
+
     </header>
     <section id="main">
         <div class="container">
             <div class="first">
                 <h1 class="first-title">Yes, We Ship Packages to Ukraine and Europe</h1>
+                <div class="first-buttons">
+                    <button class="credentials__avatar">
+                        <img class="credentials__avatar-img" src="./images/ava.svg" alt="ava" />
+                        <span class="credentials__avatar-text">LOGIN</span>
+                    </button>
+                    <button class="credentials__button">REGISTER</button>
+                </div>
                 <div class="first__links">
                     <div class="first__links-item">
-                        <img src="./images/coub.png" alt="coub">
+                        <img class="first__links-img" src="./images/first-coub.svg" alt="coub">
                         <div class="first__links-text">New parcel</div>
                     </div>
                     <div class="first__links-item">
-                        <img src="./images/card.svg" alt="coub">
+                        <img class="first__links-img" src="./images/card.svg" alt="coub">
                         <div class="first__links-text">Money transfer</div>
                     </div>
                     <div class="first__links-item">
-                        <img src="./images/calculator.svg" alt="coub">
+                        <img class="first__links-img" src="./images/calculator.svg" alt="coub">
                         <div class="first__links-text">Calculator</div>
                     </div>
                 </div>
@@ -104,7 +128,7 @@
                     </div>
                     <div class="works__box-item">
                         <div class="works__box-number">5.</div>
-                        <p class="works__box-text">Print Your Label and Attach to the Parcel</p>
+                        <p class="works__box-text">Drop off Parcel at Canada Post, Meest office or Meest Agent</p>
                         <img src="./images/works5.svg" alt="how-it-works-5" class="works__box-img">
                     </div>
                 </div>
@@ -143,7 +167,7 @@
                     <div class="info__countries-image">
                         <img src="./images/flags/ascension.svg" alt="ascension" class="info__countries-img">
                     </div>
-                    <p class="info__countries-name">Ascension Island</p>
+                    <p class="info__countries-name">Ukraine</p>
                 </div>
                 <div class="info__countries-item">
                     <div class="info__countries-image">
@@ -258,7 +282,7 @@
                     </div>
                 </div>
                 <div class="contacts__video-view">
-                    <iframe width="810" height="440" src="https://www.youtube.com/embed/F-BM9Mf8cd0"
+                    <iframe class="contacts__video-iframe" src="https://www.youtube.com/embed/F-BM9Mf8cd0"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -266,7 +290,7 @@
             </div>
             <div class="contacts__list">
                 <details class="contacts__list-details">
-                    <summary class="contacts__list-continent"><img src="./images/lang.svg" alt="contacts-sign"><span
+                    <summary class="contacts__list-continent"><img src="./images/lang.svg" class="contacts__list-img" alt="contacts-sign"><span
                             class="contacts__list-continent-name">Asia</span></summary>
                     <div class="contacts__list-block">
                         <div class="contacts__list-item">
@@ -352,7 +376,7 @@
                     </div>
                 </details>
                 <details class="contacts__list-details">
-                    <summary class="contacts__list-continent"><img src="./images/lang.svg" alt="contacts-sign"><span
+                    <summary class="contacts__list-continent"><img src="./images/lang.svg" class="contacts__list-img"  alt="contacts-sign"><span
                             class="contacts__list-continent-name">Europe</span></summary>
                     <div class="contacts__list-block">
                         <div class="contacts__list-item">
@@ -518,7 +542,7 @@
                     </div>
                 </details>
                 <details class="contacts__list-details">
-                    <summary class="contacts__list-continent"><img src="./images/lang.svg" alt="contacts-sign"><span
+                    <summary class="contacts__list-continent"><img src="./images/lang.svg"  class="contacts__list-img" alt="contacts-sign"><span
                             class="contacts__list-continent-name">North America</span></summary>
                     <div class="contacts__list-block">
                         <div class="contacts__list-item">
@@ -688,7 +712,9 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrap">
-                <img src="./images/logo.svg" alt="footer-logo" class="footer-logo">
+                
+                <div class="footer__nav">
+                    <img src="./images/logo.svg" alt="footer-logo" class="footer-logo">
                 <div class="footer__group">
                     <a href="#main" class="footer__group-link">MAin</a>
                     <a href="#how-it-works" class="footer__group-link">How it works</a>
@@ -696,21 +722,31 @@
                 </div>
                 <div class="footer__group">
                     <a href="#information-for-countries" class="footer__group-link">Information for countries</a>
-                    <a href="" class="footer__group-link">Сontact</a>
+                    <a href="#contacts" class="footer__group-link">Сontact</a>
                     <a href="#faq" class="footer__group-link">FAQ</a>
                 </div>
-                <div class="footer__group">
-                    <div class="credentials">
-                        <div class="credentials__lang"></div>
-                        <select class="credentials__list">
-                            <option class="credentials__list-item" selected>UK</option>
-                            <option class="credentials__list-item">UA</option>
-                            <option class="credentials__list-item">EN</option>
-                        </select>
-                        <div class="credentials__avatar">
-                            <img class="credentials__avatar-img" src="./images/ava.svg" alt="ava" />
+            </div>
+                <div class="footer__last-group">
+                    <div class="credentials credentials-footer">
+                        <label for="credential-input-footer" class="credential__label footer-label"></label>
+                        <input type="checkbox" id="credential-input-footer" class="credential__input footer-input">
+                        <div class="credential__language language-footer">                    
+                            <div class="credential__label-language">UK</div>
+                            <img src="./images/lang.svg" class="img-language" alt="">
+                            <!-- <img src="./images/closing.svg" alt="" class="credential-img"> -->
                         </div>
+                            <div class="credentials__list credentials__list-footer">
+                                <div class="credentials__list-item"><span class="credentials__list-text">Ukraine</span><div class="credentials__list-checked"></div></div>
+                                <div class="credentials__list-line"></div>
+                                <div class="credentials__list-item"><span class="credentials__list-text">English</span><div class="credentials__list-checked"></div></div>
+                            </div>
+                            <div class="footer-buttons">
+                        <button class="credentials__avatar credentials__footer-button">
+                            <img class="credentials__avatar-img credentials__footer-img" src="./images/ava.svg" alt="ava" />
+                            <span class="credentials__avatar-text credentials__footer-text">LOGIN</span>
+                        </button>
                         <button class="credentials__button">REGISTER</button>
+                    </div>
                     </div>
                     <div class="footer__group-social">
                         <img src="./images/facebook.svg" alt="facebook" class="footer__group-network">

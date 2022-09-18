@@ -26,3 +26,27 @@
         max-width: 1220px;
     }
 }
+@media (min-width:1024px) and (max-width:1220px){
+    .container{
+        max-width: 97%;
+    }
+}
+
+@media (max-width:1023px){
+    .container{
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    #faq>.container{
+        padding: 0;
+    }
+}
+@media (min-width:320px) and (max-width:360px){
+    .container{
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+    #faq>.container{
+        padding: 0;
+    }
+}
