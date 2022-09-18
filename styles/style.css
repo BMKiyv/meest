@@ -49,7 +49,7 @@ h2 {
 .credentials-header {
     display: flex;
     position: relative;
-    right: 210px;
+    right: 220px;
 }
 .visiblity{
     display: none;
@@ -192,8 +192,8 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .credentials__avatar {
-    width: 45px;
-    height: 45px;
+    width: 43px;
+    height: 43px;
     border-radius: 50%;
     background-color: #2361A9;
     display: flex;
@@ -202,6 +202,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     margin: 0 10px;
     outline: none;
     border: 1px solid #2361A9;
+    font-weight: 600;
 }
 
 .credentials__avatar-text {
@@ -209,8 +210,8 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .credentials__button {
-    padding: 14px 28px;
-    height: 45px;
+    padding: 0px 37px;
+    height: 41px;
     border: 2px solid #2361A9;
     color: #2361A9;
     border-radius: 25px;
@@ -220,7 +221,8 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     color: #2361A9;
     font-weight: 700;
     font-size: 15px;
-    line-height: 109%;
+    line-height: 255%;
+    text-decoration: none;
 }
 
 #main {
@@ -251,6 +253,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
     width: 100%;
     justify-content: space-around;
+    gap: 20px;
 }
 
 .first__links-item {
@@ -263,9 +266,11 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 180px;
+    width: 188px;
     padding-bottom: 41px;
     padding-top: 45px;
+    text-decoration: none;
+    flex: 1 0 auto;
 }
 
 .first__links-text {
@@ -400,6 +405,9 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     line-height: 120%;
 
 }
+.info__wrap-link{
+    text-decoration: none;
+}
 
 .info__wrap-buttons {
     background-color: var(--color1);
@@ -427,6 +435,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     font-size: 15px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    text-decoration: none;
 
 }
 
@@ -444,6 +453,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     font-size: 15px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    text-decoration: none;
 
 }
 
@@ -458,6 +468,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 0 1 auto;
 }
 
 .info__countries-image {
@@ -571,9 +582,9 @@ summary::before {
     /* content: url(../images/opening.svg);
     padding-right: 0.5em; */
     content: '';
-    width: 8px;
-    height: 8px;
-    border: 2px solid var(--color1);
+    width: 9px;
+    height: 9px;
+    border: 3px solid var(--color1);
     border-left: 0;
     border-top: 0;
     transform: rotate(45deg);
@@ -614,7 +625,7 @@ details[open]>summary::before {
 }
 
 .contacts__video-text {
-    padding: 40px 40px 0 40px;
+    padding: 40px;
 }
 
 .contacts__video-header {
@@ -634,7 +645,7 @@ details[open]>summary::before {
 }
 
 .contacts__video-second-content {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-size: 14px;
     line-height: 25px;
     letter-spacing: 0.02em;
@@ -658,12 +669,16 @@ details[open]>summary::before {
 }
 
 .contacts__video-link {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.contacts__video-link:last-child {
+    margin-bottom: 0px;
 }
 
 .contacts__video-button {
-    padding: 14px 26px;
-    height: 45px;
+    padding: 0px 26px;
+    height: 41px;
     border: 2px solid #2361A9;
     color: #2361A9;
     border-radius: 25px;
@@ -673,9 +688,10 @@ details[open]>summary::before {
     color: #2361A9;
     font-weight: 700;
     font-size: 15px;
-    line-height: 109%;
+    line-height: 255%;
     align-self: end;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .contacts__list {
@@ -836,7 +852,7 @@ summary.contacts__list-continent {
     border-top: 0;
     transform: rotate(45deg);
     position: absolute;
-    right: 212px;
+    right: 230px;
     top: 16px;
 }
 
@@ -936,7 +952,7 @@ summary.contacts__list-continent {
     }
 
     .credentials__avatar {
-        width: 135px;
+        width: 133px;
         border-radius: 25px;
         justify-content: flex-start;
         margin: 0 10px 0 0;
@@ -954,6 +970,9 @@ summary.contacts__list-continent {
         display: inline-block;
         padding: 0 20px;
         color: var(--white);
+    }
+    .credentials__button {
+        padding: 0px 32px;
     }
 
     #mobile-menu:checked~.header-container {
@@ -1187,6 +1206,7 @@ summary.contacts__list-continent {
     .first__links {
         flex-direction: column;
         margin-top: 40px;
+        gap: 0;
     }
 
     .first__links-item {
@@ -1319,7 +1339,7 @@ summary.contacts__list-continent {
         transform: rotate(45deg);
         position: absolute;
         right: 0px;
-        top: 18px;
+        top: 25px;
     }
 
     .footer__group:not(:last-child) {
@@ -1461,6 +1481,10 @@ summary.contacts__list-continent {
         padding-bottom: 20px;
     }
 
+    .info__countries-item {
+        flex: 1 0 auto;
+    }
+
     #information-for-countries {
         background-image: none;
     }
@@ -1525,6 +1549,11 @@ summary.contacts__list-continent {
 
     summary::before {
         right: 20px;
+        width: 8px;
+        height: 8px;
+        border: 2px solid var(--color1);
+        border-left: 0;
+        border-top: 0;
     }
 
     .contacts__list-img {
@@ -1565,7 +1594,10 @@ summary.contacts__list-continent {
 
     #faq{
         background-color: var(--third-background);
-        padding: 40px 0 30px;
+        padding: 35px 0 30px;
+    }
+    .faq__title{
+        font-size: 24px;
     }
     .faq__summary{
         background-color: var(--white);
@@ -1585,8 +1617,17 @@ summary.contacts__list-continent {
     .above-footer{
         display: none;
     }
+    .footer__group-social>a:first-child{
+        margin-right: 8px;
+    }
+    .header__group-social>a:first-child{
+        margin-right: 10px;
+    }
+    .mobile__group-network{
+        width: 60px;
+    }
 }
-@media (min-width:768px) and (max-width:1023px){
+@media (min-width:768px) and (max-width:1024px){
     #main{
         background-position: 0px 182px;
     }
