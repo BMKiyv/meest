@@ -91,7 +91,7 @@ h2 {
 
 .credential__input {
     position: absolute;
-    width: 60px;
+    width: 90px;
     height: 100%;
     /* display: none; */
     visibility: hidden;
@@ -100,7 +100,7 @@ h2 {
 
 .credential__label {
     position: absolute;
-    width: 60px;
+    width: 90px;
     height: 100%;
 }
 
@@ -108,6 +108,7 @@ h2 {
     display: flex;
     align-items: center;
     margin-right: 23px;
+    cursor: pointer;
 }
 
 .credential__label-language {
@@ -126,10 +127,11 @@ h2 {
     width: 190px;
     background: var(--white);
     border-top: 2px solid var(--color1);
+    cursor: pointer;
 }
 
 .credentials__list-footer {
-    top: -158px;
+    top: 52px;
     border: 1px solid #EBEFF3;
 box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
@@ -151,6 +153,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 .credential-img {
     width: 10px;
     margin-left: 7px;
+    cursor: pointer;
 }
 
 .credentials__list-item {
@@ -223,6 +226,8 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     font-size: 15px;
     line-height: 255%;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 #main {
@@ -407,8 +412,29 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 .info__wrap-link{
     text-decoration: none;
+    position: relative;
 }
+#transfer, #parcel{
+    position: absolute;
+    opacity: 0;
+}
+/* .info__wrap-radio-active{
 
+    padding: 10px 15px;
+    height: 40px;
+    border: var(--border);
+    color: var(--color1);
+    border-radius: 20px;
+    background-color: var(--white);
+    outline: none;
+    cursor: pointer;
+    color: var(--color1);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-decoration: none;
+} */
 .info__wrap-buttons {
     background-color: var(--color1);
     border: var(--border);
@@ -422,7 +448,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .info__wrap-radio {
-    padding: 10px 20px;
+    padding: 10px 27px;
     height: 40px;
     border: 1px solid var(--color1);
     color: var(--color1);
@@ -440,7 +466,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .info__wrap-radio-active {
-    padding: 10px 20px;
+    padding: 10px 15px;
     height: 40px;
     border: var(--border);
     color: var(--color1);
@@ -684,14 +710,14 @@ details[open]>summary::before {
     border-radius: 25px;
     background-color: white;
     outline: none;
-    cursor: pointer;
     color: #2361A9;
     font-weight: 700;
     font-size: 15px;
-    line-height: 255%;
     align-self: end;
     text-transform: uppercase;
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 .contacts__list {
@@ -1218,9 +1244,15 @@ summary.contacts__list-continent {
     }
 
     .first__links-img {
-        margin: 18px 15px 18px 23px;
+        margin: 18px 15px 18px 25px;
         max-height: 27px;
         max-width: 27px;
+    }
+    .first__links-item:nth-of-type(2)>.first__links-img{
+        margin: 18px 15px 18px 23px;
+    }
+    .first__links-item:nth-of-type(3)>.first__links-img{
+        margin: 18px 15px 18px 27px;
     }
 
     .first__links-text {

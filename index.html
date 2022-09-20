@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/modal.css">
+    <!-- <link rel="stylesheet" href="./meest-cabinet/front/css/style.css">
+    <link rel="stylesheet" href="./meest-cabinet/front/css/media.css"> -->
 </head>
 
 <body>
@@ -58,12 +60,12 @@
                     <img src="./images/lang.svg" alt="">
                 </div>
                 <div class="credentials__list">
-                    <div class="credentials__list-item"><span class="credentials__list-text">Ukraine</span>
+                    <div class="credentials__list-item credentials__list-item-header"><span class="credentials__list-text">Ukraine</span>
                         <div class="credentials__list-checked"></div>
                     </div>
                     <div class="credentials__list-line"></div>
-                    <div class="credentials__list-item"><span class="credentials__list-text">English</span>
-                        <div class="credentials__list-checked"></div>
+                    <div class="credentials__list-item credentials__list-item-header"><span class="credentials__list-text">English</span>
+                        <div class="credentials__list-checked" style="display:none"></div>
                     </div>
                 </div>
             </div>
@@ -137,8 +139,8 @@
             <div class="info__wrap">
                 <h2 class="info__wrap-title">Country specific delivery information</h2>
                 <div class="info__wrap-buttons">
-                    <a href="" class="info__wrap-link"><span class="info__wrap-radio">New parcel</span></a>
-                    <a href="" class="info__wrap-link"><span class="info__wrap-radio-active">Money transfer</span></a>
+                    <label for="parcel" class="info__wrap-link"><input type="radio" id="parcel"/><span class="info__wrap-radio info__wrap-radio-active">New parcel</span></label>
+                    <label for="transfer" class="info__wrap-link"><input type="radio" id="transfer" /><span class="info__wrap-radio">Money transfer</span></label>
                 </div>
             </div>
             <div class="info__countries">
@@ -275,7 +277,7 @@
                             <a href="tel:+1-800-361-7345" class="contacts__video-link">+1-800-361-7345</a>
                             <a href="tel:+1-416-236-2032" class="contacts__video-link">+1-416-236-2032</a>
                         </div>
-                        <a class="contacts__video-button">Write to us</a>
+                        <a class="contacts__video-button"><span>Write to us</span></a>
                     </div>
                 </div>
                 <div class="contacts__video-view">
@@ -729,16 +731,16 @@
                         <label for="credential-input-footer" class="credential__label footer-label"></label>
                         <input type="checkbox" id="credential-input-footer" class="credential__input footer-input">
                         <div class="credential__language language-footer">
-                            <div class="credential__label-language">UK</div>
+                            <div class="credential__label-language credential__label-language-footer">UK</div>
                             <img src="./images/lang.svg" class="img-language" alt="">
                         </div>
                         <div class="credentials__list credentials__list-footer">
-                            <div class="credentials__list-item"><span class="credentials__list-text">Ukraine</span>
+                            <div class="credentials__list-item credentials__list-item-footer"><span class="credentials__list-text">Ukraine</span>
                                 <div class="credentials__list-checked"></div>
                             </div>
                             <div class="credentials__list-line"></div>
-                            <div class="credentials__list-item"><span class="credentials__list-text">English</span>
-                                <div class="credentials__list-checked"></div>
+                            <div class="credentials__list-item credentials__list-item-footer"><span class="credentials__list-text">English</span>
+                                <div class="credentials__list-checked"style="display:none"></div>
                             </div>
                         </div>
                         <div class="footer-buttons">
@@ -757,7 +759,168 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>	<div class="calculator-popup form mfp-hide white-popup-block" id="test-modal">
+		<div class="top-calculator d-flex ai jc bb">
+			<h2 class="heading">COST CALCULATOR</h2>
+			<a href="" class="calculator-popup-dismiss"><img src="img/close.svg" alt=""></a>
+		</div>
+		<form action="" id="login_form">
+			<div class="section-sub-menu popup bb">
+				<div class="form-flex-wrap">
+					<div class="form-row">
+						<label for="" class="label">Sender From</label>
+						<input type="text" class="input" name="sender_form" placeholder="Sender Form">
+					</div>
+					<div class="form-flex d-flex ai">
+						<div class="form-row">
+							<label for="" class="label">Recipient Country</label>
+							<div class="input address-lookup d-flex ai jc">
+								<img class="flag" src="img/flag.svg" alt="">
+								<select name="address_lookup" id="" class="flag-select">
+								<option value="">Ukraine</option>
+									<option value="">Ukraine</option>
+									<option value="">Ukraine</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-row">
+							<label for="" class="label">Oblast/Province</label>
+							<select name="province" id="" class="input">
+								<img src="img/flag.svg" alt="">
+								<option value="">Ukraine</option>
+								<option value="">Ukraine</option>
+								<option value="">Ukraine</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="form-flex del-details d-flex ai">
+					<div class="w25 parcel-weight">
+						<div class="form-row">
+							<label for="" class="label">Parcel Weight kg</label>
+							<input type="text" class="input" name="parcel_weight" placeholder="">
+						</div>
+					</div>
+					<div class="flex-columns3 d-flex ai jc">
+						<div class="w33">
+							<div class="form-row">
+								<label for="" class="label">Length cm</label>
+								<input type="text" class="input" name="length" placeholder="">
+							</div>
+						</div>
+						<div class="w33">
+							<div class="form-row">
+								<label for="" class="label">Height cm</label>
+								<input type="text" class="input" name="height" placeholder="">
+							</div>
+						</div>
+						<div class="w33">
+							<div class="form-row">
+								<label for="" class="label">Width cm</label>
+								<input type="text" class="input" name="width" placeholder="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="end">
+				<button class="sub-button">CALCULATE</button>
+				<button class="main-button">SHIP NOW</button>
+			</div>		
+		</form>
+		<div></div>
+	</div>
 </body>
+<script>
+    let burger = document.querySelector('#mobile-menu');
+    let nav = document.querySelector('.nav__list');
+    let language = document.querySelector('.credential__label-language');
+    let languageFooter = document.querySelector('.credential__label-language-footer');
+    let languageBlock = document.querySelector('.credentials__list');
+    let languageBlockFooter = document.querySelector('.credentials__list-footer.credentials__list');
+    let languageText = document.querySelectorAll('.credentials__list-item.credentials__list-item-header');
+    let languageTextFooter = document.querySelectorAll('.credentials__list-item-footer');
+    let check = document.querySelectorAll('.credentials__list-checked');
+    let inputs = document.querySelectorAll('#parcel, #transfer');
+    let inputsContainer = document.querySelector('.info__wrap-buttons')
+    let popup = document.querySelector('.top-calculator');
+    let calculation= document.querySelector('.sub-button');
+    let ship = document.querySelector('.main-button');
+    let openCalculate = document.querySelector('.first__links-text');
 
+    popup.style.display = 'none';
+
+    openCalculate.addEventListener('click',()=>popup.style.display = 'block')
+    ship.addEventListener('click',()=>popup.style.display = 'none')
+    calculation.addEventListener('click',()=>popup.style.display = 'none')
+  
+
+    nav.addEventListener('click', function(){
+        burger.checked = false
+    });
+    let countriesInfoHundle = function (e) {
+        let target = e.target        
+        for(let item of inputs){
+            if (target===item){
+                target.checked = true
+                item.nextElementSibling.classList.add('info__wrap-radio-active')               
+            }
+            else{
+                target.checked = false
+                item.nextElementSibling.classList.remove('info__wrap-radio-active')
+            }
+        }
+    };
+    let languageHundle = function (e) {
+        let target = e.target
+        for(let i=0;i<languageText.length;i++){
+            console.log(target,languageText[i]);
+            if(target===languageText[i] || target===languageText[i].firstElementChild || target==languageText[i].lastElementChild){
+                if(languageText[i].firstElementChild.innerHTML==='Ukraine'){
+                    language.innerHTML = 'UK'
+                    languageFooter.innerHTML= 'UK'
+                }
+                else{
+                    language.innerHTML = 'EN'
+                    languageFooter.innerHTML= 'EN'
+                }
+                languageText[i].lastElementChild.style.display = 'block'
+                languageTextFooter[i].lastElementChild.style.display = 'block'
+            }
+            else{
+                languageText[i].lastElementChild.style.display = 'none';
+                languageTextFooter[i].lastElementChild.style.display = 'none';
+            }
+
+        }
+    }
+    let languageHundleFooter = function (e) {
+        let target = e.target
+        for(let i=0;i<languageTextFooter.length;i++){
+            console.log(target,languageTextFooter[i]);
+            if(target===languageTextFooter[i] || target===languageTextFooter[i].firstElementChild || target==languageTextFooter[i].lastElementChild){
+                if(languageTextFooter[i].firstElementChild.innerHTML==='Ukraine'){
+                    language.innerHTML = 'UK'
+                    languageFooter.innerHTML= 'UK'
+                }
+                else{
+                    language.innerHTML = 'EN'
+                    languageFooter.innerHTML= 'EN'
+                }
+                languageText[i].lastElementChild.style.display = 'block'
+                languageTextFooter[i].lastElementChild.style.display = 'block'
+            }
+            else{
+                languageText[i].lastElementChild.style.display = 'none'
+                languageTextFooter[i].lastElementChild.style.display = 'none'
+            }
+
+        }
+    }
+
+    inputsContainer.addEventListener('click', countriesInfoHundle);
+    languageBlock.addEventListener('click', languageHundle);
+    languageBlockFooter.addEventListener('click', languageHundleFooter);
+
+</script>
 </html>
