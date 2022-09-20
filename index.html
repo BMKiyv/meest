@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/modal.css">
-    <!-- <link rel="stylesheet" href="./meest-cabinet/front/css/style.css">
-    <link rel="stylesheet" href="./meest-cabinet/front/css/media.css"> -->
 </head>
 
 <body>
@@ -58,6 +56,7 @@
                 <div class="credential__language credential-before">
                     <div class="credential__label-language">UK</div>
                     <img src="./images/lang.svg" alt="">
+                    <img src="./images/opening.svg" alt="open" class="credential-img ">
                 </div>
                 <div class="credentials__list">
                     <div class="credentials__list-item credentials__list-item-header"><span class="credentials__list-text">Ukraine</span>
@@ -143,7 +142,7 @@
                     <label for="transfer" class="info__wrap-link"><input type="radio" id="transfer" /><span class="info__wrap-radio">Money transfer</span></label>
                 </div>
             </div>
-            <div class="info__countries">
+            <div class="info__countries" id="parcellist">
                 <div class="info__countries-item">
                     <div class="info__countries-image">
                        <a href=""><img src="./images/flags/algeria.svg" alt="algeria" class="info__countries-img"></a> 
@@ -156,6 +155,80 @@
                     </div>
                     <p class="info__countries-name">Ukraine</p>
                 </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/germany.svg" alt="germany" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/ascension.svg" alt="ascension" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/unknown.svg" alt="unknown" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/colombia.svg" alt="colombia" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/algeria.svg" alt="algeria" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/chezh.svg" alt="chezh" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/colombia.svg" alt="colombia" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/germany.svg" alt="germany" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/unknown.svg" alt="unknown" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/algeria.svg" alt="algeria" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/chezh.svg" alt="chezh" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+                <div class="info__countries-item">
+                    <div class="info__countries-image">
+                        <a href=""><img src="./images/flags/colombia.svg" alt="colombia" class="info__countries-img"></a>
+                    </div>
+                    <p class="info__countries-name">Ukraine</p>
+                </div>
+            </div>
+            <div class="info__countries" id="transferlist" style="display: none">
                 <div class="info__countries-item">
                     <div class="info__countries-image">
                         <a href=""><img src="./images/flags/germany.svg" alt="germany" class="info__countries-img"></a>
@@ -733,6 +806,7 @@
                         <div class="credential__language language-footer">
                             <div class="credential__label-language credential__label-language-footer">UK</div>
                             <img src="./images/lang.svg" class="img-language" alt="">
+                            <img src="./images/opening.svg" alt="open" class="credential-img ">
                         </div>
                         <div class="credentials__list credentials__list-footer">
                             <div class="credentials__list-item credentials__list-item-footer"><span class="credentials__list-text">Ukraine</span>
@@ -759,23 +833,26 @@
                 </div>
             </div>
         </div>
-    </footer>	<div class="calculator-popup form mfp-hide white-popup-block" id="test-modal">
+    </footer>
+    <div class="modal__wrap" style="display: none">
+        <div class="modal__container">
+    <div class="calculator-popup form mfp-hide white-popup-block" id="test-modal" >
 		<div class="top-calculator d-flex ai jc bb">
 			<h2 class="heading">COST CALCULATOR</h2>
-			<a href="" class="calculator-popup-dismiss"><img src="img/close.svg" alt=""></a>
+			<a href="" class="calculator-popup-dismiss"><img src="./images/close.svg" alt=""></a>
 		</div>
 		<form action="" id="login_form">
 			<div class="section-sub-menu popup bb">
 				<div class="form-flex-wrap">
 					<div class="form-row">
 						<label for="" class="label">Sender From</label>
-						<input type="text" class="input" name="sender_form" placeholder="Sender Form">
+						<input type="text" class="input sender-input" name="sender_form" placeholder="Sender Form">
 					</div>
 					<div class="form-flex d-flex ai">
 						<div class="form-row">
 							<label for="" class="label">Recipient Country</label>
 							<div class="input address-lookup d-flex ai jc">
-								<img class="flag" src="img/flag.svg" alt="">
+								<img class="flag" src="./images/flag.svg" alt="">
 								<select name="address_lookup" id="" class="flag-select">
 								<option value="">Ukraine</option>
 									<option value="">Ukraine</option>
@@ -786,7 +863,7 @@
 						<div class="form-row">
 							<label for="" class="label">Oblast/Province</label>
 							<select name="province" id="" class="input">
-								<img src="img/flag.svg" alt="">
+								<img src="./images/flag.svg" alt="">
 								<option value="">Ukraine</option>
 								<option value="">Ukraine</option>
 								<option value="">Ukraine</option>
@@ -798,26 +875,26 @@
 					<div class="w25 parcel-weight">
 						<div class="form-row">
 							<label for="" class="label">Parcel Weight kg</label>
-							<input type="text" class="input" name="parcel_weight" placeholder="">
+							<input type="text" class="input input-weight" name="parcel_weight" placeholder="">
 						</div>
 					</div>
 					<div class="flex-columns3 d-flex ai jc">
 						<div class="w33">
 							<div class="form-row">
 								<label for="" class="label">Length cm</label>
-								<input type="text" class="input" name="length" placeholder="">
+								<input type="text" class="input input-sizes" name="length" placeholder="">
 							</div>
 						</div>
 						<div class="w33">
 							<div class="form-row">
 								<label for="" class="label">Height cm</label>
-								<input type="text" class="input" name="height" placeholder="">
+								<input type="text" class="input input-sizes" name="height" placeholder="">
 							</div>
 						</div>
 						<div class="w33">
 							<div class="form-row">
 								<label for="" class="label">Width cm</label>
-								<input type="text" class="input" name="width" placeholder="">
+								<input type="text" class="input input-sizes" name="width" placeholder="">
 							</div>
 						</div>
 					</div>
@@ -829,7 +906,9 @@
 			</div>		
 		</form>
 		<div></div>
+    </div>
 	</div>
+</div>	
 </body>
 <script>
     let burger = document.querySelector('#mobile-menu');
@@ -843,21 +922,83 @@
     let check = document.querySelectorAll('.credentials__list-checked');
     let inputs = document.querySelectorAll('#parcel, #transfer');
     let inputsContainer = document.querySelector('.info__wrap-buttons')
-    let popup = document.querySelector('.top-calculator');
+    let popup = document.querySelector('#test-modal');
     let calculation= document.querySelector('.sub-button');
     let ship = document.querySelector('.main-button');
-    let openCalculate = document.querySelector('.first__links-text');
+    let openCalculate = document.querySelectorAll('.first__links-item');
+    let parcel = document.querySelector('#parcel')
+    let transfer = document.querySelector('#transfer')
+    let radiobuttons = document.querySelector('.info__wrap')
+    let parcelList = document.querySelector('#parcellist')
+    let transferList = document.querySelector('#transferlist')
+    let languageInputFooter = document.querySelector('#credential-input-footer')
+    let languageInput = document.querySelector('#credential-input')
+    let languageImg = document.querySelectorAll('.credential-img')
+    let modalWrap = document.querySelector('.modal__wrap')
+    let closeModal = document.querySelector('.calculator-popup-dismiss')
+    let header = document.querySelector('.header')
 
-    popup.style.display = 'none';
 
-    openCalculate.addEventListener('click',()=>popup.style.display = 'block')
-    ship.addEventListener('click',()=>popup.style.display = 'none')
-    calculation.addEventListener('click',()=>popup.style.display = 'none')
+    openCalculate[2].addEventListener('click',function(e){
+        e.preventDefault()
+        console.log('opened');
+        popup.style.display = 'block'
+        modalWrap.style.display = 'block'
+        header.style.zIndex = 0
+    })
+
+    function closePopup(e){
+        e.preventDefault()
+        popup.style.display = 'none'
+        modalWrap.style.display = 'none'
+        header.style.zIndex = 3
+    }
+
+    ship.addEventListener('click',function(){popup.style.display = 'none'})
+    calculation.addEventListener('click',closePopup)
+    closeModal.addEventListener('click',closePopup)
+
+    function listCountries(e){
+        let target = e.target
+        console.log('event',e.target, target, target.checked,parcel);
+        if(target===parcel){
+            parcelList.style.display = 'flex'
+            transferList.style.display = 'none'
+        }
+        else if (target === transfer){
+            parcelList.style.display = 'none'
+            transferList.style.display = 'flex'
+        }
+
+    }
+
+    transfer.addEventListener('click',listCountries)
+    parcel.addEventListener('click', listCountries)
   
 
     nav.addEventListener('click', function(){
         burger.checked = false
     });
+
+    const handleClick = event => {
+        event.preventDefault()  
+        const headerOffset = 50
+        const contentAnchors = document.querySelectorAll('#main, #how-it-works, #information-for-countries, #benefts, #contacts, #faq')
+        const href = event.target.getAttribute("href")
+        const elementToScroll = Array.from(contentAnchors).filter(item =>`#${item.getAttribute("id")}` === href ) 
+        let elementPosition = elementToScroll[0].offsetTop
+        if(elementPosition===882){
+            elementPosition = 862
+        }
+        window.scrollTo({
+          top: elementPosition - headerOffset,
+          behavior: "smooth"
+        })
+      }
+
+      document.querySelectorAll(".nav__list-item").forEach(item => 
+      item.addEventListener("click", handleClick))
+
     let countriesInfoHundle = function (e) {
         let target = e.target        
         for(let item of inputs){
@@ -874,7 +1015,6 @@
     let languageHundle = function (e) {
         let target = e.target
         for(let i=0;i<languageText.length;i++){
-            console.log(target,languageText[i]);
             if(target===languageText[i] || target===languageText[i].firstElementChild || target==languageText[i].lastElementChild){
                 if(languageText[i].firstElementChild.innerHTML==='Ukraine'){
                     language.innerHTML = 'UK'
@@ -893,11 +1033,14 @@
             }
 
         }
+        
+        languageInput.checked = false;
+        languageBlock.style.display = 'none'
+        languageImg[0].setAttribute('src','./images/opening.svg')
     }
     let languageHundleFooter = function (e) {
         let target = e.target
         for(let i=0;i<languageTextFooter.length;i++){
-            console.log(target,languageTextFooter[i]);
             if(target===languageTextFooter[i] || target===languageTextFooter[i].firstElementChild || target==languageTextFooter[i].lastElementChild){
                 if(languageTextFooter[i].firstElementChild.innerHTML==='Ukraine'){
                     language.innerHTML = 'UK'
@@ -916,11 +1059,25 @@
             }
 
         }
+        
+        languageInputFooter.checked = false;
+        languageBlockFooter.style.display = 'none'
+        languageImg[1].setAttribute('src','./images/opening.svg')
     }
 
     inputsContainer.addEventListener('click', countriesInfoHundle);
     languageBlock.addEventListener('click', languageHundle);
     languageBlockFooter.addEventListener('click', languageHundleFooter);
+    languageInput.addEventListener('click',function(){
+        languageInput.checked = true
+        languageBlock.style.display = 'block'
+        languageImg[0].setAttribute('src','./images/closing.svg')
+    })
+    languageInputFooter.addEventListener('click',function(){
+        languageInputFooter.checked = true
+        languageBlockFooter.style.display = 'block'
+        languageImg[1].setAttribute('src','./images/closing.svg')
+    })
 
 </script>
 </html>

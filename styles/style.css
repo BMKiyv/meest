@@ -114,7 +114,7 @@ h2 {
 .credential__label-language {
     margin-right: 8px;
     font-size: 16px;
-    line-height: 109%;
+    margin-top: 2px;
     font-weight: 500;
 }
 
@@ -729,7 +729,7 @@ details[open]>summary::before {
     padding: 25px 40px;
     background: #eceff4;
     max-height: 285px;
-    overflow: scroll;
+    overflow-y: scroll;
     margin-top: -5px;
 }
 
@@ -852,7 +852,7 @@ summary.contacts__list-continent {
     display: flex;
 }
 
-.credential-before::before {
+/* .credential-before::before {
     content: '';
     width: 5px;
     height: 5px;
@@ -863,13 +863,13 @@ summary.contacts__list-continent {
     position: absolute;
     right: 8px;
     top: 7px;
-}
+} */
 
 #credential-input:checked~.credential-before::before{
     transform: rotate(225deg);
 }
 
-.credential__language.language-footer::before {
+/* .credential__language.language-footer::before {
     content: '';
     width: 5px;
     height: 5px;
@@ -880,7 +880,7 @@ summary.contacts__list-continent {
     position: absolute;
     right: 230px;
     top: 16px;
-}
+} */
 
 #credential-input-footer:checked~.credential__language.language-footer::before{
     transform: rotate(225deg);

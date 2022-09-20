@@ -31,12 +31,439 @@
     line-height: 130%;
     color: var(--color1);
 }
-.modal__container-text{
+.calculator-popup {
+    margin: 0 auto;
+    width: 680px;
+  }
+  .calculator-popup .section-sub-menu {
+    padding: 40px 40px 30px;
+  }
+  .calculator-popup .end {
+    padding: 30px 40px;
+  }
+  .calculator-popup .end .sub-button {
+    margin-right: 15px;
+  }
+  .container-form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form {
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #D8E0EB;
+  }
+  
+  .form-row {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .form-row .label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 109%;
+    letter-spacing: 0.01em;
+    color: #2361A9;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .form-row .input {
+    border: 1px solid #D7D8D9;
+    border-radius: 100px;
+    padding: 14px 20px 14px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 109%;
+    letter-spacing: 0.02em;
+    color: #1B2B3C;
+  }
+  .form-row select {
+    background: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url(../images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 14px) center;
+  }
+  .form-row option {
+    background: none;
+  }
+  
+  .form-row .input.address-lookup {
+    padding: 10px;
+  }
 
-}
-.modal__container-input{
+  .top-calculator {
+    padding: 25px 20px 25px 22px;
+  }
+  .d-flex {
+    display: flex;
+  }
 
-}
-.modal__container-button{
+.ai {
+    align-items: center;
+  }
+  
+  .jc {
+    justify-content: space-between;
+  }
+  
+  .bb {
+    border-bottom: 1px solid #D8E0EB;
+  }
 
-}
+.section-sub-menu {
+    padding: 30px;
+    display: none;
+  }
+  
+  .section-sub-menu.active {
+    display: block;
+  }
+  .profile .section-sub-menu {
+    width: 70%;
+  }
+  .section-sub-menu.popup {
+    display: block;
+  }
+  .calculator-popup .section-sub-menu {
+    padding: 40px 40px 30px;
+  }
+  .section-sub-menu.deliver-to {
+    display: block;
+  }
+
+.calculator-popup {
+    margin: 0 auto;
+    width: 680px;
+  }
+  .calculator-popup .section-sub-menu {
+    padding: 40px 40px 30px;
+  }
+  .calculator-popup .end {
+    padding: 30px 40px;
+  }
+  .calculator-popup .end .sub-button {
+    margin-right: 15px;
+  }
+  .section-sub-menu.popup {
+    display: block;
+  }
+
+.form-flex-wrap .left {
+    width: calc(50% - 30px);
+    margin-right: 30px;
+  }
+  .form-flex-wrap .right {
+    width: 50%;
+  }
+  .form-row {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .form-row .input.sender-input{
+    width: 558px;
+  }
+  .form-row .input.address-lookup.d-flex{
+    width: 272px;
+  }
+  .form-row select.input[name="province"]{
+    width: 286px;
+  }
+  .form-row .input.input-sizes{
+    width: 98px;
+  }
+  .form-row .input.input-weight{
+    width: 98px;
+  }
+  .form-row .label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 109%;
+    letter-spacing: 0.01em;
+    color: #2361A9;
+    margin-bottom: 5px;
+    display: block;
+  }
+  .form-row .input {
+    border: 1px solid #D7D8D9;
+    border-radius: 100px;
+    padding: 14px 20px 14px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 109%;
+    letter-spacing: 0.02em;
+    color: #1B2B3C;
+  }
+  .form-row select {
+    background: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url(../images/down-arrow.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 14px) center;
+  }
+  .form-row option {
+    background: none;
+  }
+  
+  .form-row .input.address-lookup {
+    padding: 10px;
+  }
+  .form-columns2 .form-row {
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .form-row.last {
+    margin-bottom: 0;
+  }
+  .flex-columns3 .form-row {
+    margin-bottom: 0;
+  }
+  .form-flex .w25.parcel-weight .form-row {
+    margin-bottom: 0;
+  }
+  .form-row .input {
+    border: 1px solid #D7D8D9;
+    border-radius: 100px;
+    padding: 14px 20px 14px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 109%;
+    letter-spacing: 0.02em;
+    color: #1B2B3C;
+  }
+  .form-row .input.address-lookup {
+    padding: 10px;
+  }
+
+.form-flex.del-details {
+    column-gap: 13px;
+  }
+  .form-flex .w25.parcel-weight .form-row {
+    margin-bottom: 0;
+  }
+  .form-flex {
+    column-gap: 20px;
+  }
+  .form-flex.parcel-details {
+    width: 100%;
+  }
+  .form-row .input.address-lookup {
+    padding: 10px;
+  }
+  
+  .address-lookup select {
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: calc(100% - 4px) center;
+    width: 100%;
+  }
+  .address-lookup select option {
+    background: none;
+  }
+  .flag {
+    margin-right: 10px;
+  }
+  .iti__flag-container .iti__selected-flag {
+    height: unset;
+    padding: 11px 6px 11px 8px;
+  }
+  .iti--allow-dropdown .iti__flag-container .iti__selected-flag {
+    overflow: hidden;
+  }
+  .iti--separate-dial-code .iti__selected-flag {
+    background-color: unset;
+  }
+  
+  .iti--allow-dropdown .iti__flag-container .iti__selected-flag {
+    overflow: hidden;
+    border-radius: 30px 0 0 30px;
+  }
+  .w25 {
+    width: 25%;
+  }
+  .form-flex .w25.parcel-weight .form-row {
+    margin-bottom: 0;
+  }
+  .flex-columns3 {
+    width: 75%;
+    column-gap: 13px;
+  }
+  .flex-columns3 .form-row {
+    margin-bottom: 0;
+  }
+  .w33 {
+    width: 33.3%;
+  }
+  .end {
+    display: flex;
+    justify-content: end;
+  }
+  .end .main-button {
+    margin-right: 0;
+  }
+  .login-form .sub-button {
+    margin: 0 auto;
+  }
+  .sub-button {
+    border-radius: 100px;
+    padding: 15px 31px;
+    border: 1px solid #2361A9;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 109%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #2361A9;
+    background-color: #fff;
+    display: inline-block;
+  }
+  .login-form .main-button {
+    margin: 0 auto 30px;
+  }
+  
+.main-button {
+    background: #2361A9;
+    border-radius: 100px;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 109%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    display: block;
+    outline: none;
+    border: #2361A9;
+  }  
+  @media screen and (max-width: 1248px) {
+    .form-row .input {
+      padding: 13px 15px 13px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+
+    .form-flex-wrap .right {
+      width: 100%;
+    }
+    .form-row {
+      margin-bottom: 14px;
+    }
+
+    .form-flex-wrap {
+      display: block;
+    }
+    .form-flex-wrap .left {
+      width: 100%;
+      margin-right: 0;
+    }
+    .form-columns2 .form-row {
+      margin-bottom: 14px;
+    }
+    .form-flex {
+      display: block;
+    }
+    .form-flex .w25.parcel-weight {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .flex-columns3 {
+      width: 100%;
+      column-gap: 23px;
+    }
+    .flex-columns3 .w25 {
+      width: 33.3%;
+    }
+    .modal__container{
+        background: white;
+        position: static;
+        transform: none;
+        padding: 0px;
+        text-align: initial;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .form-row .input.sender-input{
+        width: calc(100% - 30px);
+      }
+      .form-row .input.address-lookup.d-flex{
+        width: calc(100% - 20px);
+      }
+      .form-row select.input[name="province"]{
+        width: 100%;
+      }
+      .form-row .input.input-weight{
+        width: calc(100% - 30px);
+      }
+      .form-row .input.input-sizes{
+        width: 66%;
+      }
+    .login-form {
+      width: 100%;
+      margin: 15px 0 50px;
+    }
+    .login-form .form {
+      width: 100%;
+    }
+    .container-form {
+      padding: 30px 15px;
+    }
+    .create_account .logo {
+      margin-bottom: 0;
+    }
+    .logo {
+      width: 103px;
+      margin-right: 0;
+      display: block;
+    }
+    .sub-button {
+      padding: 10px 26px;
+    }
+    .top-create-account {
+      margin-bottom: 35px;
+    }
+    .divide::after {
+      width: 70%;
+    }
+    .calculator-popup {
+      margin: 0;
+      width: calc(100% + 12px);
+      margin-left: -12px;
+      height: 100%;
+      position: fixed;
+      z-index: 20000;
+      background-color: #fff;
+    }
+    .mfp-inline-holder .mfp-content {
+      height: 100%;
+    }
+    .flex-columns3 {
+      column-gap: 7px;
+    }
+    .calculator-popup .end {
+      padding: 30px 16px 30px 40px;
+    }
+    .calculator-popup .section-sub-menu {
+      padding: 20px 15px 30px;
+    }
+    .calculator-popup.form {
+      border-radius: 0;
+    }
+    .top-calculator {
+      padding: 42px 15px 0px;
+      border-bottom: 0;
+    }
+  }
