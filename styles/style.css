@@ -1361,7 +1361,7 @@ summary.contacts__list-continent {
     .credential__label{
         right: 20px;
     }
-    .credential-before::before {
+    /* .credential-before::before {
         content: '';
         width: 6px;
         height: 6px;
@@ -1372,7 +1372,7 @@ summary.contacts__list-continent {
         position: absolute;
         right: 0px;
         top: 25px;
-    }
+    } */
 
     .footer__group:not(:last-child) {
         margin-right: 0;
