@@ -68,15 +68,16 @@ h2 {
 .nav__list-item::before {
     content: '';
     height: 3px;
-    border-radius: 30% 30% 0 0;
+    border-radius: 12px 12px 0 0;
     width: 100%;
-    background-color: transparent;
+    background-color: #E40137;
     position: absolute;
-    top: 45px;
+    top: 46px;
+    visibility: hidden;
 }
 
 .nav__list-item:hover::before {
-    background-color: red;
+    visibility: visible;
 
 }
 
@@ -1203,7 +1204,7 @@ summary.contacts__list-continent {
     #main {
         height: 780px;
         margin-top: 60px;
-        background-image: url(../images/firstback-mobile.svg);
+        background-image: url(../images/firstback-mobile.png);
         background-position: center bottom;
         background-size: contain;
     }
@@ -1349,7 +1350,7 @@ summary.contacts__list-continent {
     #credential-input:checked~.credentials__list {
         display: block;
         left: unset;
-        top: -110px;
+        top: -160px;
         right: 0px;
         border: 1px solid #EBEFF3;
         box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
@@ -1459,6 +1460,7 @@ summary.contacts__list-continent {
         font-weight: 700;
         font-size: 12px;
         line-height: 130%;
+        width: 100%;
     }
 
     .works__box-img {
