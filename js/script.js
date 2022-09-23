@@ -41,9 +41,9 @@ function closePopup(e){
     header.style.zIndex = 3
 }
 
-ship.addEventListener('click', closePopup)
-calculation.addEventListener('click',closePopup)
-closeModal.addEventListener('click',closePopup)
+// ship.addEventListener('click', closePopup)
+// calculation.addEventListener('click',closePopup)
+// closeModal.addEventListener('click',closePopup)
 
 function listCountries(e){
     let target = e.target
