@@ -24,7 +24,13 @@ let languageImg = document.querySelectorAll('.credential-img')
 let modalWrap = document.querySelector('.modal__wrap')
 let closeModal = document.querySelector('.calculator-popup-dismiss')
 let header = document.querySelector('.header')
+let iframeWindow = document.querySelector('#test-modal')
 
+iframeWindow.addEventListener('message',(e)=>{
+    if (e){
+        console.log('recieved message', e);
+    }
+})
 
 openCalculate[2].addEventListener('click',function(e){
     e.preventDefault()
