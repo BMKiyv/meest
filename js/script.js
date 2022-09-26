@@ -26,9 +26,17 @@ let closeModal = document.querySelector('.calculator-popup-dismiss')
 let header = document.querySelector('.header')
 let iframeWindow = document.querySelector('#test-modal')
 
-iframeWindow.addEventListener('message',(e)=>{
+iframeWindow.addEventListener('load',(e)=>{
     if (e){
-        console.log('recieved message', e);
+        this.postMessage('testing', 'http://confucius.dyndns.org:9272/MeestPortal/estimator')
+        console.log('recieved message', e, this);
+    }
+})
+window.addEventListener('message', function (e){
+    let answer = e.data
+    console.log(e,answer);
+    if(answer==='close-modal' ||  answer === 'calculate' || answer === 'ship-now'){
+        closeIframe()
     }
 })
 
@@ -42,6 +50,11 @@ openCalculate[2].addEventListener('click',function(e){
 
 function closePopup(e){
     e.preventDefault()
+    popup.style.display = 'none'
+    modalWrap.style.display = 'none'
+    header.style.zIndex = 3
+}
+function closeIframe(){
     popup.style.display = 'none'
     modalWrap.style.display = 'none'
     header.style.zIndex = 3

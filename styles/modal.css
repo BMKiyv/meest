@@ -143,8 +143,10 @@
 
 .calculator-popup {
   margin: 0 auto;
-  width: 680px;
-  height: 520px;
+  /* width: 680px;
+  height: 520px; */
+  width: 880px;
+    height: 492px;
   border: none;
 
   }
