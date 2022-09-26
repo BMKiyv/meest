@@ -45,28 +45,11 @@ function closePopup(e){
 // calculation.addEventListener('click',closePopup)
 // closeModal.addEventListener('click',closePopup)
 
-function listCountries(e){
-    let target = e.target
-    if(target===parcel){
-        parcelList.style.display = 'flex'
-        transferList.style.display = 'none'
-    }
-    else if (target === transfer){
-        parcelList.style.display = 'none'
-        transferList.style.display = 'flex'
-    }
-
-}
-
-transfer.addEventListener('click',listCountries)
-parcel.addEventListener('click', listCountries)
-
-
 nav.addEventListener('click', function(){
     burger.checked = false
 });
 
-const handleClick = event => {
+const handleMobileNavClick = event => {
     event.preventDefault()  
     const headerOffset = 50
     const contentAnchors = document.querySelectorAll('#main, #how-it-works, #information-for-countries, #benefts, #contacts, #faq')
@@ -80,10 +63,10 @@ const handleClick = event => {
       top: elementPosition - headerOffset,
       behavior: "smooth"
     })
-  }
+  };
 
   document.querySelectorAll(".nav__list-item").forEach(item => 
-  item.addEventListener("click", handleClick))
+  item.addEventListener("click", handleMobileNavClick));
 
 let countriesInfoHundle = function (e) {
     let target = e.target        
@@ -97,12 +80,21 @@ let countriesInfoHundle = function (e) {
             item.nextElementSibling.classList.remove('info__wrap-radio-active')
         }
     }
+    if(target===parcel){
+        parcelList.style.display = 'flex'
+        transferList.style.display = 'none'
+    }
+    else if (target === transfer){
+        parcelList.style.display = 'none'
+        transferList.style.display = 'flex'
+    }
+
 };
+
 let languageHundle = function (e) {
     let target = e.target
-    console.log(target.name, e);
     for(let i=0;i<languageText.length;i++){
-        if(target===languageText[i] || target===languageText[i].firstElementChild || target==languageText[i].lastElementChild){
+        if(target===languageText[i] || target===languageText[i].firstElementChild){
             if(languageText[i].firstElementChild.innerHTML==='Ukraine'){
                 language.innerHTML = 'UK'
                 languageFooter.innerHTML= 'UK'
@@ -128,11 +120,12 @@ let languageHundle = function (e) {
     languageInput.checked = false;
     languageBlock.style.display = 'none'
     languageImg[0].setAttribute('src','./images/opening.svg')
-}
+};
+
 let languageHundleFooter = function (e) {
     let target = e.target
     for(let i=0;i<languageTextFooter.length;i++){
-        if(target===languageTextFooter[i] || target===languageTextFooter[i].firstElementChild || target==languageTextFooter[i].lastElementChild){
+        if(target===languageTextFooter[i] || target===languageTextFooter[i].firstElementChild){
             if(languageTextFooter[i].firstElementChild.innerHTML==='Ukraine'){
                 language.innerHTML = 'UK'
                 languageFooter.innerHTML= 'UK'
@@ -161,8 +154,8 @@ let languageHundleFooter = function (e) {
 }
 
 inputsContainer.addEventListener('click', countriesInfoHundle);
-languageBlock.addEventListener('click', languageHundle);
-languageBlockFooter.addEventListener('click', languageHundleFooter);
+languageBlock.addEventListener('click', languageHundle,true);
+languageBlockFooter.addEventListener('click', languageHundleFooter,true);
 languageInput.addEventListener('click',function(){
     if(languageInput.checked===true){
     languageBlock.style.display = 'block'
