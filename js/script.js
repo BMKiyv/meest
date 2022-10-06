@@ -28,12 +28,18 @@ let iframeWindow = document.querySelector('#test-modal')
 
 window.addEventListener('message', function (e){
     let answer = e.data
+    //console.log(e,answer,e.origin);
     if (e.origin !== 'http://confucius.dyndns.org:9272') {
+        // something from an unknown domain, let's ignore it
         return;
       }
 
     if(answer==='close-modal'){
         closeIframe()
+    }
+    else if( answer === 'ship-now'){
+        closeIframe()
+        window.location.href = "https://www.mymeest.ca/MeestPortal/login"
     }
 });
 
