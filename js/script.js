@@ -26,23 +26,20 @@ let closeModal = document.querySelector('.calculator-popup-dismiss')
 let header = document.querySelector('.header')
 let iframeWindow = document.querySelector('#test-modal')
 
-iframeWindow.addEventListener('load',(e)=>{
-    if (e){
-        this.postMessage('testing', 'http://confucius.dyndns.org:9272/MeestPortal/estimator')
-        console.log('recieved message', e, this);
-    }
-})
 window.addEventListener('message', function (e){
     let answer = e.data
-    console.log(e,answer);
-    if(answer==='close-modal' ||  answer === 'calculate' || answer === 'ship-now'){
+    if (e.origin !== 'http://confucius.dyndns.org:9272') {
+        return;
+      }
+
+    if(answer==='close-modal'){
         closeIframe()
     }
-})
+});
+
 
 openCalculate[2].addEventListener('click',function(e){
     e.preventDefault()
-    console.log('opened');
     popup.style.display = 'block'
     modalWrap.style.display = 'block'
     header.style.zIndex = 0
