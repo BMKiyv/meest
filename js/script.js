@@ -21,10 +21,13 @@ let transferList = document.querySelector('#transferlist')
 let languageInputFooter = document.querySelector('#credential-input-footer')
 let languageInput = document.querySelector('#credential-input')
 let languageImg = document.querySelectorAll('.credential-img')
-let modalWrap = document.querySelector('.modal__wrap')
+let modalWrap = document.querySelector('#modal-iframe')
 let closeModal = document.querySelector('.calculator-popup-dismiss')
 let header = document.querySelector('.header')
 let iframeWindow = document.querySelector('#test-modal')
+let countriesNotice = document.querySelectorAll('.info__countries-notice')
+let countryModal = document.querySelector('#parcel-notice')
+let noticeModalClose = document.querySelector('.modal__notice-close')
 
 window.addEventListener('message', function (e){
     let answer = e.data
@@ -113,6 +116,23 @@ let countriesInfoHundle = function (e) {
 
 };
 
+let parcelNotice = function (e) {
+    let target = e.target;
+    for (let item of countriesNotice){
+        if(target===item){
+            countryModal.style.display = 'block'
+            countryModal.style.zIndex = 10
+        }
+    }
+}
+
+let closeNoticeModal = (e)=>{
+    let target = e.target
+    if(target){
+        countryModal.style.display = 'none'
+    }
+}
+
 let languageHundle = function (e) {
     let target = e.target
     for(let i=0;i<languageText.length;i++){
@@ -175,6 +195,8 @@ let languageHundleFooter = function (e) {
     languageImg[1].setAttribute('src','./images/opening.svg')
 }
 
+noticeModalClose.addEventListener('click',closeNoticeModal )
+parcelList.addEventListener('click',parcelNotice);
 inputsContainer.addEventListener('click', countriesInfoHundle);
 languageBlock.addEventListener('click', languageHundle,true);
 languageBlockFooter.addEventListener('click', languageHundleFooter,true);
