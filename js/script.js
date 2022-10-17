@@ -21,14 +21,34 @@ let transferList = document.querySelector('#transferlist')
 let languageInputFooter = document.querySelector('#credential-input-footer')
 let languageInput = document.querySelector('#credential-input')
 let languageImg = document.querySelectorAll('.credential-img')
-let modalWrap = document.querySelector('.modal__wrap')
+let modalWrap = document.querySelector('#modal-iframe')
 let closeModal = document.querySelector('.calculator-popup-dismiss')
 let header = document.querySelector('.header')
+let iframeWindow = document.querySelector('#test-modal')
+let countriesNotice = document.querySelectorAll('.info__countries-notice')
+let countryModal = document.querySelector('#parcel-notice')
+let noticeModalClose = document.querySelector('.modal__notice-close')
+
+window.addEventListener('message', function (e){
+    let answer = e.data
+    //console.log(e,answer,e.origin);
+    if (e.origin !== 'http://confucius.dyndns.org:9272') {
+        // something from an unknown domain, let's ignore it
+        return;
+      }
+
+    if(answer==='close-modal'){
+        closeIframe()
+    }
+    else if( answer === 'ship-now'){
+        closeIframe()
+        window.location.href = "https://www.mymeest.ca/MeestPortal/login"
+    }
+});
 
 
 openCalculate[2].addEventListener('click',function(e){
     e.preventDefault()
-    console.log('opened');
     popup.style.display = 'block'
     modalWrap.style.display = 'block'
     header.style.zIndex = 0
@@ -40,33 +60,21 @@ function closePopup(e){
     modalWrap.style.display = 'none'
     header.style.zIndex = 3
 }
-
-ship.addEventListener('click', closePopup)
-calculation.addEventListener('click',closePopup)
-closeModal.addEventListener('click',closePopup)
-
-function listCountries(e){
-    let target = e.target
-    if(target===parcel){
-        parcelList.style.display = 'flex'
-        transferList.style.display = 'none'
-    }
-    else if (target === transfer){
-        parcelList.style.display = 'none'
-        transferList.style.display = 'flex'
-    }
-
+function closeIframe(){
+    popup.style.display = 'none'
+    modalWrap.style.display = 'none'
+    header.style.zIndex = 3
 }
 
-transfer.addEventListener('click',listCountries)
-parcel.addEventListener('click', listCountries)
-
+// ship.addEventListener('click', closePopup)
+// calculation.addEventListener('click',closePopup)
+// closeModal.addEventListener('click',closePopup)
 
 nav.addEventListener('click', function(){
     burger.checked = false
 });
 
-const handleClick = event => {
+const handleMobileNavClick = event => {
     event.preventDefault()  
     const headerOffset = 50
     const contentAnchors = document.querySelectorAll('#main, #how-it-works, #information-for-countries, #benefts, #contacts, #faq')
@@ -80,13 +88,17 @@ const handleClick = event => {
       top: elementPosition - headerOffset,
       behavior: "smooth"
     })
-  }
+  };
 
   document.querySelectorAll(".nav__list-item").forEach(item => 
-  item.addEventListener("click", handleClick))
+  item.addEventListener("click", handleMobileNavClick));
 
 let countriesInfoHundle = function (e) {
-    let target = e.target        
+    let target = e.target  
+    console.log(e);  
+    if(target===inputsContainer) {
+        return
+    }   
     for(let item of inputs){
         if (target===item){
             target.checked = true
@@ -97,12 +109,38 @@ let countriesInfoHundle = function (e) {
             item.nextElementSibling.classList.remove('info__wrap-radio-active')
         }
     }
+    if(target===parcel){
+        parcelList.style.display = 'flex'
+        transferList.style.display = 'none'
+    }
+    else if (target === transfer){
+        parcelList.style.display = 'none'
+        transferList.style.display = 'flex'
+    }
+
 };
+
+let parcelNotice = function (e) {
+    let target = e.target;
+    for (let item of countriesNotice){
+        if(target===item){
+            countryModal.style.display = 'block'
+            countryModal.style.zIndex = 10
+        }
+    }
+}
+
+let closeNoticeModal = (e)=>{
+    let target = e.target
+    if(target){
+        countryModal.style.display = 'none'
+    }
+}
+
 let languageHundle = function (e) {
     let target = e.target
-    console.log(target.name, e);
     for(let i=0;i<languageText.length;i++){
-        if(target===languageText[i] || target===languageText[i].firstElementChild || target==languageText[i].lastElementChild){
+        if(target===languageText[i] || target===languageText[i].firstElementChild){
             if(languageText[i].firstElementChild.innerHTML==='Ukraine'){
                 language.innerHTML = 'UK'
                 languageFooter.innerHTML= 'UK'
@@ -128,11 +166,12 @@ let languageHundle = function (e) {
     languageInput.checked = false;
     languageBlock.style.display = 'none'
     languageImg[0].setAttribute('src','./images/opening.svg')
-}
+};
+
 let languageHundleFooter = function (e) {
     let target = e.target
     for(let i=0;i<languageTextFooter.length;i++){
-        if(target===languageTextFooter[i] || target===languageTextFooter[i].firstElementChild || target==languageTextFooter[i].lastElementChild){
+        if(target===languageTextFooter[i] || target===languageTextFooter[i].firstElementChild){
             if(languageTextFooter[i].firstElementChild.innerHTML==='Ukraine'){
                 language.innerHTML = 'UK'
                 languageFooter.innerHTML= 'UK'
@@ -160,9 +199,11 @@ let languageHundleFooter = function (e) {
     languageImg[1].setAttribute('src','./images/opening.svg')
 }
 
+noticeModalClose.addEventListener('click',closeNoticeModal )
+parcelList.addEventListener('click',parcelNotice);
 inputsContainer.addEventListener('click', countriesInfoHundle);
-languageBlock.addEventListener('click', languageHundle);
-languageBlockFooter.addEventListener('click', languageHundleFooter);
+languageBlock.addEventListener('click', languageHundle,true);
+languageBlockFooter.addEventListener('click', languageHundleFooter,true);
 languageInput.addEventListener('click',function(){
     if(languageInput.checked===true){
     languageBlock.style.display = 'block'
