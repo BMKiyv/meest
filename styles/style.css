@@ -1872,5 +1872,8 @@ height: 30px;
     padding: 19px 10px;
     width: calc(100% - 20px);
 }
+.modal__notice{
+    min-height: 560px;
+}
 
 }
