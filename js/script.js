@@ -94,7 +94,11 @@ const handleMobileNavClick = event => {
   item.addEventListener("click", handleMobileNavClick));
 
 let countriesInfoHundle = function (e) {
-    let target = e.target        
+    let target = e.target  
+    console.log(e);  
+    if(target===inputsContainer) {
+        return
+    }   
     for(let item of inputs){
         if (target===item){
             target.checked = true

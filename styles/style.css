@@ -536,6 +536,8 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     left: 50%;
     transform: translate(-50%,-50%);
     width: 600px;
+    height: 97%;
+    overflow: auto;
 }
 .modal__notice-header{
     height: 55px;
@@ -607,7 +609,6 @@ color: var(--third-background);
     line-height: 25px;
 }
 .modal__notice-content-wrap{
-    overflow: auto;
     max-height: 690px;
     min-height: 600px;
     padding: 30px 75px 30px 40px;
@@ -1012,9 +1013,7 @@ summary.contacts__list-continent {
     .benefits__list-text {
         width: 268px;
     }
-    .modal__notice-content-wrap{
-        max-height: 600px;
-    }
+
 }
 
 @media (min-width:1175px) and (max-width:1280px){
@@ -1636,8 +1635,8 @@ summary.contacts__list-continent {
     }
     .modal__notice{
         width: 95%;
-        height: 95%;
-        overflow: auto;
+        min-height: 650px;
+        max-height: 770px;
     }
     .modal__notice-content-wrap{
         padding: 20px;
@@ -1683,9 +1682,13 @@ height: 30px;
 }
 .modal__notice-button{
     font-size: 13px;
+    width: calc(100% - 60px);
+    text-align: center;
+    padding: 19px 30px;
 }
 .modal__notice-button-wrap{
     padding-bottom: 20px;
+    width: 100%;
 }
 
 .info__countries-notice{
@@ -1865,4 +1868,9 @@ height: 30px;
     width: 90px;
     height: 90px;
 }
+.modal__notice-button{
+    padding: 19px 10px;
+    width: calc(100% - 20px);
+}
+
 }
