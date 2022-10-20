@@ -414,6 +414,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 .info__wrap-link{
     text-decoration: none;
     position: relative;
+    flex-grow: 1;
 }
 #transfer, #parcel{
     position: absolute;
@@ -440,17 +441,17 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     background-color: var(--color1);
     border: var(--border);
     border-radius: 25px;
-    height: 50px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 360px;
-
+    /* width: 360px; */
+    padding: 3px;
 }
 
 .info__wrap-radio {
-    padding: 10px 27px;
-    height: 40px;
+    padding: 12px 27px;
+    /* height: 40px; */
     border: 1px solid var(--color1);
     color: var(--color1);
     border-radius: 20px;
@@ -463,12 +464,13 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-decoration: none;
-
+    display: inline-block;
+    text-align: center;
 }
 
 .info__wrap-radio-active {
-    padding: 10px 15px;
-    height: 40px;
+    padding: 12px 15px;
+    /* height: 40px; */
     border: var(--border);
     color: var(--color1);
     border-radius: 20px;
@@ -481,7 +483,8 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     letter-spacing: 0.02em;
     text-transform: uppercase;
     text-decoration: none;
-
+    display: inline-block;
+    text-align: center;
 }
 
 .info__countries {
@@ -536,7 +539,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     left: 50%;
     transform: translate(-50%,-50%);
     width: 600px;
-    height: 97%;
+    /* height: 97%; */
     overflow: auto;
 }
 .modal__notice-header{
@@ -1541,6 +1544,9 @@ summary.contacts__list-continent {
         padding: 40px 0 40px;
         align-items: center;
     }
+    .info__wrap-link{
+        width: 50%;
+    }
 
     .first__links-item:nth-of-type(2)>.first__links-text {
         margin-top: 0px;
@@ -1594,20 +1600,22 @@ summary.contacts__list-continent {
     .info__wrap-buttons {
         width: 340px;
     margin: 0 auto;
+    justify-content: space-between;
     }
 
     .info__wrap-radio {
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
-        padding: 10px 28px;
+        padding: 10px 10px;
+        width: calc(100% - 23px);
     }
 
     .info__wrap-radio-active {
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
-        padding: 10px 28px;
+        padding: 10px 10px;
     }
 
     .info__countries-image {
@@ -1637,6 +1645,7 @@ summary.contacts__list-continent {
         width: 95%;
         min-height: 650px;
         max-height: 770px;
+        height: 97%;
     }
     .modal__notice-content-wrap{
         padding: 20px;
@@ -1871,6 +1880,12 @@ height: 30px;
 .modal__notice-button{
     padding: 19px 10px;
     width: calc(100% - 20px);
+}
+.modal__notice {
+    width: 95%;
+    min-height: 520px;
+    max-height: 570px;
+    height: 97%;
 }
 
 }

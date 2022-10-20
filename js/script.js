@@ -33,7 +33,6 @@ window.addEventListener('message', function (e){
     let answer = e.data
     //console.log(e,answer,e.origin);
     if (e.origin !== 'http://confucius.dyndns.org:9272') {
-        // something from an unknown domain, let's ignore it
         return;
       }
 
@@ -65,10 +64,6 @@ function closeIframe(){
     modalWrap.style.display = 'none'
     header.style.zIndex = 3
 }
-
-// ship.addEventListener('click', closePopup)
-// calculation.addEventListener('click',closePopup)
-// closeModal.addEventListener('click',closePopup)
 
 nav.addEventListener('click', function(){
     burger.checked = false
@@ -201,6 +196,7 @@ let languageHundleFooter = function (e) {
 
 noticeModalClose.addEventListener('click',closeNoticeModal )
 parcelList.addEventListener('click',parcelNotice);
+transferList.addEventListener('click',parcelNotice);
 inputsContainer.addEventListener('click', countriesInfoHundle);
 languageBlock.addEventListener('click', languageHundle,true);
 languageBlockFooter.addEventListener('click', languageHundleFooter,true);
