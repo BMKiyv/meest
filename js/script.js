@@ -25,9 +25,10 @@ let modalWrap = document.querySelector('#modal-iframe')
 let closeModal = document.querySelector('.calculator-popup-dismiss')
 let header = document.querySelector('.header')
 let iframeWindow = document.querySelector('#test-modal')
-let countriesNotice = document.querySelectorAll('.info__countries-notice')
+let countriesNotice = document.querySelectorAll('.info__countries-image')
 let countryModal = document.querySelector('#parcel-notice')
 let noticeModalClose = document.querySelector('.modal__notice-close')
+let countryNotice = document.querySelector('.modal__notice-country')
 
 window.addEventListener('message', function (e){
     let answer = e.data
@@ -90,7 +91,7 @@ const handleMobileNavClick = event => {
 
 let countriesInfoHundle = function (e) {
     let target = e.target  
-    console.log(e);  
+    //console.log(e);  
     if(target===inputsContainer) {
         return
     }   
@@ -118,9 +119,14 @@ let countriesInfoHundle = function (e) {
 let parcelNotice = function (e) {
     let target = e.target;
     for (let item of countriesNotice){
-        if(target===item){
+        let first = item.firstElementChild
+        let last = item.lastElementChild
+        if(target===item || first===target || last===target){
             countryModal.style.display = 'block'
             countryModal.style.zIndex = 10
+            console.log(item.nextElementSibling);
+            let countryName = item.nextElementSibling.innerHTML
+            countryNotice.innerHTML = countryName
         }
     }
 }
