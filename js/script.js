@@ -26,8 +26,8 @@ let closeModal = document.querySelector('.calculator-popup-dismiss')
 let header = document.querySelector('.header')
 let iframeWindow = document.querySelector('#test-modal')
 let countriesNotice = document.querySelectorAll('.info__countries-image')
-let countryModal = document.querySelector('#parcel-notice')
-let noticeModalClose = document.querySelector('.modal__notice-close')
+let countryModal = document.querySelectorAll('.parcel-notice')
+let noticeModalClose = document.querySelectorAll('.modal__notice-close')
 let countryNotice = document.querySelector('.modal__notice-country')
 
 window.addEventListener('message', function (e){
@@ -121,21 +121,31 @@ let parcelNotice = function (e) {
     for (let item of countriesNotice){
         let first = item.firstElementChild
         let last = item.lastElementChild
+        let itemAttr = item.parentElement.getAttribute('data-country')
         if(target===item || first===target || last===target){
-            countryModal.style.display = 'block'
-            countryModal.style.zIndex = 10
-            console.log(item.nextElementSibling);
-            let countryName = item.nextElementSibling.innerHTML
-            countryNotice.innerHTML = countryName
+            for(let piece of countryModal){
+                let pieceAttr = piece.getAttribute('data-country')
+                if (itemAttr===pieceAttr){
+                    piece.style.display = 'block'
+                    piece.style.zIndex = 10
+                    piece.classList.add('modal__wrap')
+                }
+
+            }
         }
     }
 }
 
 let closeNoticeModal = (e)=>{
     let target = e.target
-    if(target){
-        countryModal.style.display = 'none'
+   for (let x of noticeModalClose) {
+    if(target.classList[0]===x.classList[0]){
+        for(let piece of countryModal){
+            piece.style.display = 'none'
+        }
     }
+   }
+
 }
 
 let languageHundle = function (e) {
@@ -200,7 +210,7 @@ let languageHundleFooter = function (e) {
     languageImg[1].setAttribute('src','./images/opening.svg')
 }
 
-noticeModalClose.addEventListener('click',closeNoticeModal )
+window.addEventListener('click',closeNoticeModal )
 parcelList.addEventListener('click',parcelNotice);
 transferList.addEventListener('click',parcelNotice);
 inputsContainer.addEventListener('click', countriesInfoHundle);
