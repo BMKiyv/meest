@@ -143,7 +143,8 @@
 
 .calculator-popup {
     margin: 0 auto;
-    width: 680px;
+    width: 880px;
+    height: 492px;
   }
   .calculator-popup .section-sub-menu {
     padding: 40px 40px 30px;
