@@ -229,6 +229,7 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
 }
 
 #main {
@@ -511,6 +512,9 @@ box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
     align-items: center;
     justify-content: center;
     position: relative;
+}
+.info__countries-img {
+    width: 65px;
 }
 
 .info__countries-name {
@@ -1115,6 +1119,7 @@ summary.contacts__list-continent {
         display: inline-block;
         padding: 0 20px;
         color: var(--white);
+        text-transform: uppercase;
     }
     .credentials__button {
         padding: 0px 32px;
