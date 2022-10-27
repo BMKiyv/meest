@@ -121,8 +121,9 @@ let parcelNotice = function (e) {
     for (let item of countriesNotice){
         let first = item.firstElementChild
         let last = item.lastElementChild
+        let sibling = item.nextElementSibling
         let itemAttr = item.parentElement.getAttribute('data-country')
-        if(target===item || first===target || last===target){
+        if(target===item || first===target || last===target || sibling===target){
             for(let piece of countryModal){
                 let pieceAttr = piece.getAttribute('data-country')
                 if (itemAttr===pieceAttr){
