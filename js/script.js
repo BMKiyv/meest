@@ -33,7 +33,7 @@ let countryNotice = document.querySelector('.modal__notice-country')
 window.addEventListener('message', function (e){
     let answer = e.data
     //console.log(e,answer,e.origin);
-    if (e.origin !== 'http://confucius.dyndns.org:9272') {
+    if (e.origin !== 'https://www.mymeest.ca') {
         return;
       }
 
